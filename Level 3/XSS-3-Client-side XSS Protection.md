@@ -1,0 +1,107 @@
+**_XSS – Level 3 – Client-side XSS Protection Bypass_**
+
+## 1. Methodology
+
+**Step 1 – Aller sur la page d’inscription**
+
+- Aller sur la page Login.
+- Cliquer sur “Not yet a customer”.
+- Créer un compte.
+
+**Step 2 – Préparer Burp Suite**
+
+- Ouvrir Burp Suite → Proxy.
+- Passer Intercept sur OFF.
+- Revenir sur le site et cliquer sur Register pour envoyer la requête.
+
+**Step 3 – Envoyer la requête à Intruder\***
+
+- Aller dans Burp → Proxy.
+- Trouver la requête POST d’inscription.
+- Clic droit → “Send to Intruder”.
+
+**Step 4 – Modifier le champ email pour injecter du XSS**
+
+- Dans Intruder, repérer le champ "email".
+- Le remplacer par le payload :
+  **<iframe src=\"javascript:alert(`xss`)\">**
+- Important : les guillemets doivent être échappés sinon erreur JSON.
+
+**Step 5 – Lancer la requête**
+
+- Cliquer sur “Start attack” ou “Send”.
+- Consulter la réponse.
+
+**Step 6 – Validation**
+
+- La réponse du serveur contient :  
+  "status": "success"  
+  → Le XSS est accepté, la protection côté client est contournée.  
+  Challenge validé.
+
+---
+
+## 2. Vulnerabilities
+
+**Vulnerability name:**
+
+- XSS persistant (Stored XSS)
+- Validation insuffisante côté client
+- Entrée utilisateur non filtrée
+
+**Composant affecté :**
+
+- Endpoint d’enregistrement utilisateur `/api/Users/`
+- Champ JSON "email"
+
+**Severity:**
+
+**High**
+
+---
+
+## 3. Risks
+
+- Exécution de JavaScript arbitraire dans le navigateur des utilisateurs.
+- Vol de cookies et de tokens JWT.
+- Redirections malveillantes.
+- Injection persistante dans la base utilisateur.
+- Fuite d’informations et compromission du site.
+
+---
+
+## 4. Actions
+
+### Mitigation
+
+- Ne jamais se fier à la validation côté client.
+- Filtrer toutes les entrées côté serveur.
+- Supprimer ou échapper les balises HTML dangereuses.
+
+### Remediation
+
+- Encoder automatiquement `<`, `>`, `"`, `'`.
+- Utiliser un moteur de sanitization robuste.
+- Vérifier que le champ email contient un email valide.
+
+### Best Practices
+
+- Mettre en place une Content Security Policy (CSP).
+- Auditer régulièrement les formulaires du site.
+- Tester automatiquement contre les attaques XSS.
+
+---
+
+## 5. Evidence
+
+Payload injecté :
+
+**<iframe src=\"javascript:alert(`xss`)\">**
+
+Réponse du serveur :  
+"status": "success"
+
+**Resultat de la requete avec payload injecté**
+![Requete GET](../image/XSS_Client-side.png)
+
+---
