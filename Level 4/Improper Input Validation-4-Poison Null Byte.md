@@ -1,56 +1,49 @@
-**_Improper Input Validation – Level 4 – Poison Null Byte File Access_**
+**_Improper Input Validation – Level 4 – Poison Null Byte_**
 
 ## 1. Methodology
 
-**Step 1 – Accéder à la page FTP**
+**Step 1 – Reconnaissance**
 
-- Aller sur la page `/ftp` du Juice Shop.
-- Cette page expose une liste de fichiers internes du site.
-- Repérer le fichier nommé **“eastere egg”** ou similaire.
+- Observation du comportement général de l’application **OWASP Juice Shop**.
+- Recherche d’indices et de contenus cachés (Easter Eggs, fichiers oubliés, erreurs serveur).
+- Utilisation de **Burp Suite** et **Firefox DevTools** pour intercepter et analyser les requêtes HTTP.
 
-**Step 2 – Tenter d’ouvrir le fichier**
+**Step 2 – Exploration via FTP**
 
-- Cliquer sur le fichier.
-- Le serveur refuse de le télécharger correctement car il ne reconnaît pas l’extension.
+- Remplacement du segment `/search` dans l’URL par `/ftp` :
 
-**Step 3 – Exploiter le Poison Null Byte**
+https://juice-shop.example.com/ftp
 
-- Pour contourner cette protection, modifier l’URL en ajoutant un Null Byte encodé :
+- Cela révèle un répertoire FTP accessible par erreur (mauvaise configuration serveur).
 
-%2500.md
+**Step 3 – Découverte du fichier “eastere.gg”**
 
-- Exemple complet :
+- En parcourant les fichiers visibles, un fichier nommé `eastere.gg` attire l’attention.
+- Cliquer dessus l’ouvre dans une nouvelle fenêtre, mais le téléchargement direct échoue.
 
-/ftp/eastere egg%2500.md
+**Step 4 – Exploitation du Poison Null Byte**
 
-**Pourquoi ca fonctionne ?**
+- Pour contourner la vérification d’extension côté serveur, injection d’un **Poison Null Byte** :
 
-- Le serveur voit : “un fichier `.md` → autorisé”.
-- Le système de fichiers voit : “eastere egg” (il s’arrête au Null Byte).
-- Résultat : accès accordé au fichier qui ne devrait pas être téléchargeable.
+https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
-**Step 4 – Télécharger et lire le fichier**
+`%2500` correspond à un **NULL byte encodé deux fois**.
 
-- Le fichier téléchargé contient une chaîne encodée en Base64 :
+- Le serveur interprète alors la fin du nom de fichier comme `.md` et autorise le téléchargement.
 
-/gur/qrif/ner/fb/shaal/gurl/uvq/na/rnfgre/rtt/jvguva/gur/rnfgre/rtt
+**Step 5 – Récupération et validation**
 
-**Step 5 – Décodage Base64**
+- Le fichier est téléchargé avec succès en `.md` et contient l’easter egg.
+- En revenant sur la page `/search`, les trois flags sont automatiquement validés :
+- **Easter Egg**
+- **Poison Null Byte**
+- **Error Handling / Git Exposure**
 
-- Aller sur : https://www.base64decode.org/
-- Coller la chaîne → résultat illisible (texte encodé).
+**Outils utilisés :**
 
-**Step 6 – Déchiffrement ROT13**
-
-- Aller sur : https://rot13.com/
-- Coller le texte Base64 décodé.
-- ROT13 révèle un **chemin secret** utilisable dans l’URL.
-
-**Step 7 – Accéder au Nested Easter Egg**
-
-- Ajouter ce path à l’URL du Juice Shop.
-- Une page cachée apparaît, contenant une **terre orange qui tourne**.
-- Challenge validé.
+- Navigateur web
+- Burp Suite
+- URL encoding tool (pour générer `%2500`)
 
 ---
 
@@ -107,11 +100,5 @@
 
 ## 5. Evidence
 
-**Decodeur base64**
-![Decodeur base64](../image/Nested_Egg_1.png)
-
-**Traducteur Rot13**
-![Traducteur Rot13](../image/Nested_Egg_2.png)
-
-**Nested Egg**
-![Nested Egg](../image/Nested_Egg_3.png)
+**Site sur les Poison Null Byte**
+https://www.cardboard-iguana.com/grimoire/spells/poison-null-byte-attack

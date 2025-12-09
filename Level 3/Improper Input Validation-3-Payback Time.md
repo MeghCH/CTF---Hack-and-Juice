@@ -1,4 +1,4 @@
-**_Improper Input Validation – Level 4 – Negative Basket Quantity Exploit_**
+**_Improper Input Validation – Level 4 – Payback Time_**
 
 ## 1. Methodology
 
@@ -126,5 +126,3 @@ Content-Type: application/json
 }
 
 Montant du panier affiché en négatif → commande validée.
-
----

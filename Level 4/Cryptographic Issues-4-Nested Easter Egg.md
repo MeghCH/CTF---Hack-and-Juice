@@ -57,7 +57,6 @@
 - Navigateur web
 - Base64 Decode Tool
 - ROT13 Tool
-- (Optionnel) Burp Suite pour inspecter les requêtes
 
 ---
 
@@ -93,19 +92,19 @@
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Interdire l’accès public au répertoire `/ftp`.
 - Bloquer les Null Bytes (`%00`, `%2500`…) dans les URLs.
 - Valider strictement les noms et extensions de fichiers côté serveur.
 
-### Remediation Fix
+**Remediation Fix**
 
 - Supprimer toute navigation dans les répertoires backend.
 - Ne servir que des fichiers explicitement autorisés.
 - Nettoyer les données et supprimer les fichiers d’aide internes.
 
-### Best Practices
+**Best Practices**
 
 - Séparer contenu public et fichiers internes dans deux environnements distincts.
 - Activer un WAF pour détecter des patterns d’exploitation.

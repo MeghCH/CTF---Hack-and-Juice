@@ -66,7 +66,7 @@ Challenge validé.
 **Outils utilisés :**
 
 - Burp Suite (Proxy + Repeater)
-- Navigateur
+- Navigateur Web
 - JSON viewer
 
 ---

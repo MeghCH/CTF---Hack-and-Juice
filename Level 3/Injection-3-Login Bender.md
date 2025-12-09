@@ -88,3 +88,10 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 - Réaliser des tests réguliers d’injection.
 
 ---
+
+## 5. Evidence
+
+**Site sur l'injection sql**
+https://www.vaadata.com/blog/fr/injections-sql-principes-impacts-exploitations-bonnes-pratiques-securite/
+
+https://portswigger.net/web-security/sql-injection

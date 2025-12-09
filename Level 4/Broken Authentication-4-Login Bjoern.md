@@ -19,7 +19,7 @@
 
 **Step 3 – Déconnexion**
 
-- Si nécessaire, se déconnecter pour pouvoir lancer la procédure de réinitialisation.
+- Se déconnecter pour pouvoir lancer la procédure de réinitialisation.
 
 **Step 4 – Procédure “Forgot Password”**
 
@@ -59,7 +59,6 @@
 
 - Navigateur Web
 - OSINT : recherche Google, YouTube
-- Analyse des reviews internes du site
 
 ---
 
@@ -93,19 +92,19 @@
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Supprimer les questions secrètes statiques.
 - Remplacer par un système de réinitialisation par **email avec token unique**.
 - Limiter le nombre d’essais de réponse à la question secrète.
 
-### Remediation Fix
+**Remediation Fix**
 
 - Utiliser des tokens signés, expirant rapidement.
 - Exiger un second facteur pour la réinitialisation de mots de passe sensibles.
 - Empêcher l’utilisation d’informations publiques comme questions secrètes.
 
-### Best Practices
+**Best Practices**
 
 - Toujours privilégier un reset sécurisé (token, MFA).
 - Éviter toute forme de questions statiques.

@@ -1,4 +1,4 @@
-**_Broken Authentication – Level 3 – Password Reset Bjoern_**
+**_Broken Authentication – Level 3 – Bjoern's Favorite Pet_**
 
 ## 1. Methodology
 
@@ -8,8 +8,7 @@
 - Parcourir les **produits** disponibles afin d’identifier des informations utilisateurs.
 - Dans le produit _OWASP Snakes and Ladders – Web Applications_, accéder aux **reviews**.
 - Copier/coller l’email visible dans un commentaire :  
-  → Exemple : bjoern.kimminich@owasp.org  
-  (L’adresse exacte peut varier selon l’instance, mais elle apparaît dans les avis du produit.)
+  → Exemple : bjoern.kimminich@owasp.org
 
 **Step 2 – Déconnexion et lancement de la procédure de récupération**
 

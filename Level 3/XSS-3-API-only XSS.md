@@ -1,5 +1,5 @@
-**_XSS – Level 4 – Persistent XSS via Product Description_**
-S
+**_XSS – Level 3 – API-only XSS_**
+
 ## 1. Methodology
 
 **Step 1 – Aller sur la page All Products**
@@ -9,16 +9,18 @@ S
 **Step 2 – Préparer Burp Suite**
 
 - Ouvrir Burp Suite → Proxy.
-- Mettre **Intercept OFF**.
+- Mettre **Intercept ON**.
 - Revenir sur la page web et **rafraîchir**.
 
 **Step 3 – Intercepter la bonne requête**
 
 - Dans Burp, appuyer sur **Forward** plusieurs fois jusqu’à obtenir :  
   GET /api/Challenges/?name=Score%20Board HTTP/2
+- Clique droit et send to repeater
 
 **Step 4 – Modifier la requête**
 
+- Aller dans Repeater
 - Supprimer : Challenges/?name=Score%20Board
 - Remplacer par : Products
 - Le serveur renvoie alors un JSON contenant tous les produits.
@@ -71,6 +73,10 @@ S
 - Retourner sur All Products.
 - Ouvrir la fiche du produit Banana.
 - Le JavaScript s’exécute → **XSS validé**.
+
+**Outils utilisés :**
+
+- Burp Suite (Proxy + Repeater)
 
 ---
 
@@ -132,5 +138,3 @@ S
 
 **Resultat requete PUT**
 ![Resultat requete PUT](../image/XSS_API_3.png)
-
----

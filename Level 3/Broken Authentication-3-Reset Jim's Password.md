@@ -48,6 +48,11 @@ Samuel
 - Entrer l’email de Jim et le nouveau mot de passe.
 - Connexion réussie → challenge validé.
 
+**Outils utilisés :**
+
+- Navigateur Web
+- Recherche google
+
 ---
 
 ## 2. Vulnerabilities
@@ -105,4 +110,4 @@ Samuel
 **Page wikipedia de James Thiberius Kirk**
 ![Page wikipedia de James Thiberius Kirk](../image/Reset_psw_Jim.png)
 
----
+

@@ -1,4 +1,4 @@
-**_Sensitive Data Exposure – Level 4 – Intruder Password Brute Force_**
+**_Sensitive Data Exposure – Level 4 – Login Amy_**
 
 ## 1. Methodology
 
@@ -84,10 +84,13 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 - Lorsque l’attaque est terminée, chercher dans les résultats une requête ayant une **Response Length différente** ou un **Code 200** au lieu d’une erreur.
 - Le mot de passe correct apparaît dans une réponse dont le **body commence par :**  
   **KIF**
-
-Cela indique que le challenge est réussi et que la combinaison testée est la bonne.
+- Je copie colle ce mot de passe sur le site et le challenge est validé.
 
 ---
+
+**Outils utilisés :**
+
+- Burp Suite (Proxy + Intruder)
 
 ## 2. Vulnerabilities
 
@@ -148,5 +151,3 @@ Cela indique que le challenge est réussi et que la combinaison testée est la b
 
 **Resultat de l'attaque sur Burp**
 ![Resultat de l'attaque sur Burp](../image/Login_Amy_3.png)
-
----

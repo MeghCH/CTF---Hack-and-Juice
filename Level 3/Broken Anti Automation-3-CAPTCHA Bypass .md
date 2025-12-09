@@ -1,4 +1,4 @@
-**_Broken Anti Automation – Level 4 – Feedback Brute Force_**
+**_Broken Anti Automation – Level 4 – CAPTCHA Bypass_**
 
 ## 1. Methodology
 
@@ -32,7 +32,7 @@ https://juice-shop.example.com/#/feedback
 
 **Step 5 – Exploitation**
 
-- Saisie d’un nouveau message : `Hellloooooo`
+- Saisie d’un nouveau message : `Hallloooooo`
 - Attribution de 3 étoiles, réponse au captcha
 - Activation du **Intercept ON** puis soumission du formulaire à nouveau.
 - Clic droit → **Send to Repeater** dans Burp Suite.
@@ -50,10 +50,8 @@ https://juice-shop.example.com/#/feedback
 
 **Outils utilisés :**
 
-- **Burp Suite (Proxy + Repeater)**
-- **Navigateur web**
-- **Bloc-notes**
-- **Captcha solver manuel**
+- Burp Suite (Proxy + Repeater)
+- Bloc-notes
 
 ---
 
@@ -71,7 +69,7 @@ https://juice-shop.example.com/#/feedback
 
 ## 3. Risks
 
-- Possibilité d’abuser du système de feedback (spam, flood, DDoS applicatif).
+- Possibilité d’abuser du système de feedback (spam, flood).
 - Captcha inefficace → automatisation possible via scripts ou Burp Intruder.
 - Peut mener à une **pollution de la base de données** (feedbacks multiples inutiles).
 - Impact : dégradation du service, atteinte à la crédibilité de la plateforme.
@@ -111,3 +109,6 @@ Content-Type: application/json
 "rating": 3,
 "captcha": "ab12cd"
 }
+
+**Site sur Captcha**
+https://medium.com/@mtsboysquad001/captcha-bypass-28de7279865b

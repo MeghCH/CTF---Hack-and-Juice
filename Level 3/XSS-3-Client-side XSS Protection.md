@@ -11,25 +11,25 @@
 **Step 2 – Préparer Burp Suite**
 
 - Ouvrir Burp Suite → Proxy.
-- Passer Intercept sur OFF.
+- Passer Intercept sur ON.
 - Revenir sur le site et cliquer sur Register pour envoyer la requête.
 
-**Step 3 – Envoyer la requête à Intruder\***
+**Step 3 – Envoyer la requête à Repeater\***
 
 - Aller dans Burp → Proxy.
 - Trouver la requête POST d’inscription.
-- Clic droit → “Send to Intruder”.
+- Clic droit → “Send to Repeater”.
 
 **Step 4 – Modifier le champ email pour injecter du XSS**
 
-- Dans Intruder, repérer le champ "email".
+- Dans Repeater, repérer le champ "email".
 - Le remplacer par le payload :
   **<iframe src=\"javascript:alert(`xss`)\">**
-- Important : les guillemets doivent être échappés sinon erreur JSON.
+- Important : les \ doivent être échappés sinon erreur JSON.
 
 **Step 5 – Lancer la requête**
 
-- Cliquer sur “Start attack” ou “Send”.
+- Cliquer sur “Send”.
 - Consulter la réponse.
 
 **Step 6 – Validation**
@@ -38,6 +38,10 @@
   "status": "success"  
   → Le XSS est accepté, la protection côté client est contournée.  
   Challenge validé.
+
+**Outils utilisés :**
+
+- Burp Suite (Proxy + Intruder)
 
 ---
 
@@ -103,5 +107,3 @@ Réponse du serveur :
 
 **Resultat de la requete avec payload injecté**
 ![Requete GET](../image/XSS_Client-side.png)
-
----

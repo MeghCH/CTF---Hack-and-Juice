@@ -85,3 +85,10 @@ jim@juice-sh.op'--
 - Utiliser une authentification renforcée (MFA).
 
 ---
+
+## 5. Evidence
+
+**Site sur l'injection sql**
+https://www.vaadata.com/blog/fr/injections-sql-principes-impacts-exploitations-bonnes-pratiques-securite/
+
+https://portswigger.net/web-security/sql-injection
