@@ -1,4 +1,4 @@
-**_Broken Access Control– Level 4 – Easter Egg_**
+**_Broken Access Control – Level 4 – Easter Egg_**
 
 ## 1. Methodology
 
