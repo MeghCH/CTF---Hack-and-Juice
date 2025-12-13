@@ -74,7 +74,7 @@
 - Ouvrir la fiche du produit Banana.
 - Le JavaScript s’exécute → **XSS validé**.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
 

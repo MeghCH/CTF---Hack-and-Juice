@@ -1,4 +1,4 @@
-# _Broken Access Control – Level 4 – Allowlist Bypass_
+# _Unvalidated Redirects – Level 4 – Allowlist Bypass_
 
 ## 1. Methodology
 
@@ -40,7 +40,11 @@
 
 **Step 5 – Validation**
 
-- Le challenge **Allowlist Bypass Level 4** est validé.
+- Le challenge est validé.
+
+## Outils utilisés :
+
+- DevTools
 
 ---
 

@@ -88,7 +88,7 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 
 ---
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Burp Suite (Proxy + Intruder)
 
@@ -121,19 +121,19 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Limiter le nombre de tentatives de login (rate limiting / lockout).
 - Ajouter un délai progressif entre chaque tentative.
 - Détecter les patterns de brute-force.
 
-### Remediation Fix
+**Remediation Fix**
 
 - Implémenter un **CAPTCHA** après plusieurs tentatives échouées.
 - Utiliser une politique de mots de passe robustes.
 - Ajouter une protection côté serveur contre les attaques automatisées.
 
-### Best Practices
+**Best Practices**
 
 - Journaliser les tentatives d’authentification.
 - Déployer une solution WAF capable de bloquer les attaques rapides.

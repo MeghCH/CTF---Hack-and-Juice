@@ -1,4 +1,4 @@
-**_Broken Anti Validation – Level 3 – Admin Registration_**
+**_Improper Input Validation – Level 3 – Admin Registration_**
 
 ## 1. Methodology
 
@@ -63,10 +63,12 @@ Réponse :
 Le compte créé devient administrateur.  
 Challenge validé.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
+
 - Navigateur Web
+
 - JSON viewer
 
 ---

@@ -52,10 +52,12 @@
 - On a trouvé un Easter Egg caché dans un autre Easter Egg (d’où le nom _Nested_).
 - Challenge validé !
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Navigateur web
+
 - Base64 Decode Tool
+
 - ROT13 Tool
 
 ---

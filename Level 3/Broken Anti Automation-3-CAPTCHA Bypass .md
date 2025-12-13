@@ -48,9 +48,10 @@ https://juice-shop.example.com/#/feedback
 - Retour sur la page web → “All Products”.
 - Challenge validé : **Broken Access Control / Rate Limiting / CAPTCHA Weakness**.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
+
 - Bloc-notes
 
 ---

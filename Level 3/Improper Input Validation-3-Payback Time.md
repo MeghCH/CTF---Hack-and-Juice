@@ -57,9 +57,10 @@ Content-Type: application/json
 **Résultat :**  
 La commande passe même avec un montant négatif → challenge validé.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Burp Suite (Proxy)
+
 - Navigateur Web
 
 ---
@@ -78,8 +79,7 @@ La commande passe même avec un montant négatif → challenge validé.
 - Order calculation logic
 
 **Severity :**
-
-- **Critical** = permet de manipuler le prix et contourner le paiement.
+**Critical** = permet de manipuler le prix et contourner le paiement.
 
 ---
 
@@ -95,19 +95,19 @@ La commande passe même avec un montant négatif → challenge validé.
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Valider toutes les quantités côté serveur.
 - Interdire les valeurs négatives ou zéro.
 - Vérifier les types d’entrées.
 
-### Remediation Fix
+**Remediation Fix**
 
 - Forcer `quantity >= 1`.
 - Utiliser des entiers non signés (unsigned).
 - Recalculer le total **uniquement côté serveur**.
 
-### Best Practices
+**Best Practices**
 
 - Ne jamais faire confiance au client.
 - Effectuer des tests de fuzzing sur les endpoints sensibles.

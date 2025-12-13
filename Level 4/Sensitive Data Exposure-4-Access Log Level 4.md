@@ -30,6 +30,12 @@ internes, - messages d'erreur, - données sensibles.
 
 Le challenge se valide après le téléchargement du fichier.
 
+## Outils utilisés :
+
+- Burp suit
+
+- DevTools
+
 ---
 
 ## 2. Vulnerabilities

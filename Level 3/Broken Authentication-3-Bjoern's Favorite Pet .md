@@ -42,11 +42,14 @@ Dans la démonstration, les informations affichées sont :
 **Résultat :**  
 Vous êtes maintenant en mesure de vous connecter avec le **compte de Bjoern**, challenge validé.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Navigateur Web
+
 - Recherche Google
+
 - YouTube (présentation officielle de Björn Kimminich)
+
 - OSINT appliqué aux informations publiques
 
 ---

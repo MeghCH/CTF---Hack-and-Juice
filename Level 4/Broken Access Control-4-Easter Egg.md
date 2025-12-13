@@ -39,10 +39,12 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 - **Poison Null Byte**
 - **Error Handling / Git Exposure**
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Navigateur web
+
 - Burp Suite
+
 - URL encoding tool (pour générer `%2500`)
 
 ---

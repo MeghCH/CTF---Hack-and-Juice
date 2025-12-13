@@ -55,9 +55,10 @@
 - Entrer l’email trouvé et le nouveau mot de passe défini.
 - Le login réussit → challenge validé.
 
-**Outils utilisés :**
+## Outils utilisés :
 
 - Navigateur Web
+
 - OSINT : recherche Google, YouTube
 
 ---

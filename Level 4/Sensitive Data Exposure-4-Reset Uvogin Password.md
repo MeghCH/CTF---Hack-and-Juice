@@ -1,4 +1,4 @@
-**_Sensitive Data Exposure -- Level 4 -- Reset Uvogin's Password_**
+**_Sensitive Data Exposure – Level 4 – Reset Uvogin's Password_**
 
 ## 1. Methodology
 
@@ -38,8 +38,11 @@
 ### Outils utilisés
 
 - Navigateur Web
+
 - Wayback Machine
+
 - Outils OSINT / recherche Google
+
 - DevTools
 
 ---
