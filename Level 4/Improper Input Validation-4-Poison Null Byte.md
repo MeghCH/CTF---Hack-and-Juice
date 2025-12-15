@@ -6,7 +6,6 @@
 
 - Observation du comportement général de l’application **OWASP Juice Shop**.
 - Recherche d’indices et de contenus cachés (Easter Eggs, fichiers oubliés, erreurs serveur).
-- Utilisation de **Burp Suite** et **Firefox DevTools** pour intercepter et analyser les requêtes HTTP.
 
 **Step 2 – Exploration via FTP**
 
@@ -43,8 +42,6 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
 - Navigateur web
 
-- Burp Suite
-
 - URL encoding tool (pour générer `%2500`)
 
 ---
@@ -53,6 +50,7 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
 **Vulnerability name:**
 
+- Improper Input Validation
 - Poison Null Byte Injection
 - Unrestricted File Access
 - Security Misconfiguration
@@ -60,11 +58,12 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
 **Affected component:**
 
-- File download handler
-- FTP directory exposure `/ftp`
-- Input validation (filename parsing)
+- Gestionnaire de téléchargement de fichiers
+- Exposition du répertoire FTP `/ftp`
 
-**Severity:** High
+**Severity:**
+
+- **High**
 
 ---
 
@@ -88,7 +87,7 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
 **Remediation fixes:**
 
-- Utiliser des fonctions sûres (non basées sur C) pour gérer les chemins de fichiers.
+- Utiliser des fonctions sûres pour gérer les chemins de fichiers.
 - Nettoyer les entrées afin de supprimer les Null Bytes.
 - Désactiver la page `/ftp` ou la protéger via authentification.
 

@@ -38,8 +38,6 @@
 
 - Résultat : redirection vers Google → bypass réussi.
 
-**Step 5 – Validation**
-
 - Le challenge est validé.
 
 ## Outils utilisés :
@@ -50,10 +48,18 @@
 
 ## 2. Vulnerabilities
 
-**Vulnerability** : Improper Allowlist Validation / Open Redirect\
-**Affected Component** : redirect handler\
-**Severity:**  
-**High**
+**Vulnerability:**
+
+- Unvalidated Redirects
+- Improper Allowlist Validation
+
+  **Affected Component:**
+
+  - Gestionnaire de redirection (Redirect handler)
+
+  **Severity:**
+
+  - **High**
 
 ---
 
@@ -76,7 +82,7 @@
 **Remediation Fix**
 
 - Comparaison exacte des domaines (match complet).
-- Canonicalisation avant validation.
+- Canonicalisation avant validation. (transformer une donnée qui peut s’écrire de mille façons en une forme unique “canonique” afin de pouvoir la comparer, la filtrer et l’autoriser/interdire correctement.)
 - Blocage des redirections externes.
 
 **Best Practices**
@@ -85,3 +91,8 @@
 - Journaliser les tentatives suspectes.
 
 ---
+
+## 5. Evidence
+
+**Site OWASP REdirect Prevention**
+https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html

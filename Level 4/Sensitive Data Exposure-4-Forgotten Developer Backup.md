@@ -1,4 +1,4 @@
-**_Vulnerable Components – Level 4 – Forgotten Developer Backup_**
+**_Sensitive Data Exposure – Level 4 – Forgotten Developer Backup_**
 
 ## 1. Methodology
 
@@ -20,7 +20,7 @@
 
 - Présence d'un fichier :
 
-  **package.json.back**
+  **package.json.bak**
 
 - Tentative d'ouverture directe refusée.
 - Message : seuls les fichiers `.md` ou `.pdf` sont autorisés.
@@ -41,9 +41,6 @@
 
 - Lecture du fichier de sauvegarde.
 - Identification de dépendances et composants internes.
-
-**Step 6 – Validation**
-
 - Le challenge est validé.
 
 ---
@@ -54,19 +51,25 @@
 
 - Encodage d'URL (%2500)
 
-- Analyse manuelle
-
 - OSINT basique
 
 ---
 
 ## 2. Vulnerabilities
 
-**Vulnerability** : Vulnerable & Outdated Components / Forgotten Backup
-Exposure\
-**Affected component** : Répertoire FTP et fichiers de backup\
+**Vulnerability:**
+
+- Sensitive Data Exposure
+- Vulnerable & Outdated Components
+- Forgotten Backup Exposure
+
+**Affected component:**
+
+- Répertoire FTP et fichiers de backup
+
 **Severity:**
-**High**
+
+- **High**
 
 ---
 
@@ -84,7 +87,6 @@ Exposure\
 
 - Supprimer les fichiers de backup.
 - Restreindre l'accès FTP.
-- Bloquer les caractères de contrôle.
 
 **Remediation Fix**
 
@@ -101,6 +103,9 @@ Exposure\
 ---
 
 ## 5. Evidence
+
+**Site Recommandations OWASP**
+https://cheatsheetseries.owasp.org/index.html
 
 **Répertoire FTP**
 ![Répertoire FTP](../image/Legacy_1.png)

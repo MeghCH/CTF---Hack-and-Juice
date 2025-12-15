@@ -20,7 +20,7 @@
 
 - Présence du fichier :
 
-        package.json.back
+        package.json.bak
 
 - Tentative d'ouverture directe → refus.
 
@@ -59,16 +59,11 @@
 - Saisie de **Epilogue** dans le champ _comments_.
 - Ajout d'une note et résolution du CAPTCHA.
 - Soumission du formulaire.
-
-**Step 8 – Validation**
-
 - Le challenge est validé.
 
 ## Outils utilisés :
 
 - Navigateur web
-
-- DevTools
 
 - Encodage d’URL (%2500)
 
@@ -78,12 +73,18 @@
 
 ## 2. Vulnerabilities
 
-**Vulnerability:** Vulnerable & Outdated Components / Legacy File
-Exposure\
-**Affected component:** Dépendances applicatives et répertoire FTP
-exposé\
-**Severity:**  
-**High**
+**Vulnerability:**
+
+- Vulnerable & Outdated Components
+- Legacy File Exposure
+
+**Affected component:**
+
+- Dépendances et répertoire FTP exposé
+
+**Severity:**
+
+- **High**
 
 ---
 
@@ -114,11 +115,14 @@ exposé\
 
 - Auditer régulièrement les dépendances.
 - Mettre à jour ou supprimer les composants obsolètes.
-- Suivre les recommandations OWASP sur les **Vulnerable Components**.
+- Suivre les recommandations OWASP sur les **Vulnerable Dependency Management**.
 
 ---
 
 ## 5. Evidence
+
+**Site OWASP Vulnerable Dependency Management**
+https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html
 
 **Répertoire FTP**
 ![Répertoire FTP](../image/Legacy_1.png)

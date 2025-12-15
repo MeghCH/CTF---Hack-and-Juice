@@ -6,7 +6,6 @@
 
 - Analyse initiale du site pour comprendre son comportement général.
 - Observation des pages accessibles sans authentification.
-- Inspection des requêtes HTTP via Burp Suite et DevTools.
 
 **Step 2 – Navigation vers /support/logs**
 
@@ -30,22 +29,24 @@ internes, - messages d'erreur, - données sensibles.
 
 Le challenge se valide après le téléchargement du fichier.
 
-## Outils utilisés :
-
-- Burp suit
-
-- DevTools
-
 ---
 
 ## 2. Vulnerabilities
 
-**Vulnerability** : Broken Access Control -- Missing Authorization /
-IDOR\
-**Affected component** : Route `/support/logs` et système de
-journalisation\
+**Vulnerability** :
+
+- Sensitive Data Exposure
+- Broken Access Control
+- Missing Authorization
+
+**Affected component:**
+
+- Route `/support/logs` et système de
+  journalisation\
+
 **Severity:**
-**High / Critical**
+
+- **High / Critical**
 
 ---
 
@@ -64,7 +65,7 @@ journalisation\
 
 - Restreindre l'accès à /support/logs.
 - Déplacer les logs hors du répertoire public.
-- Appliquer RBAC.
+- Appliquer Contrôle d'accès basé sur les rôles (RBAC).
 
 **Remediation Fix**
 
@@ -75,7 +76,7 @@ journalisation\
 **Best Practices**
 
 - Ne jamais exposer les logs au public.
-- Utiliser un WAF.
+- Utiliser un WAF (Web Application Firewall).
 - Appliquer les recommandations OWASP.
 - Auditer régulièrement les permissions.
 

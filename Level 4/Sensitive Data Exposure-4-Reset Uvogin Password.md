@@ -2,24 +2,24 @@
 
 ## 1. Methodology
 
-### Step 1 – Reconnaissance
+**Step 1 – Reconnaissance**
 
 - Navigation sur le site pour repérer les fonctionnalités sensibles.
 - Identification de la page **"Forgot my password"**.
 - Analyse du formulaire : email + question personnelle.
 
-### Step 2 – Identification de la cible
+**Step 2 – Identification de la cible**
 
 - L'utilisateur ciblé est **Uvogin**.
 - Saisie de son email dans la page de réinitialisation.
 
-### Step 3 – OSINT : Recherche Internet
+**Step 3 – OSINT : Recherche Internet**
 
 - Recherche du nom _"Uvogin"_.
 - Découverte du profil X (anciennement Twitter) :\
   https://x.com/uv0gin
 
-### Step 4 – Exploration via Wayback Machine
+**Step 4 – Exploration via Wayback Machine**
 
 - Recherche des snapshots 2025 → aucun.
 - Recherche 2024 → 2 snapshots non exploitables.
@@ -28,14 +28,14 @@
 - Un snapshot de **2020**, le **3 avril 19h37**, mentionne le film\
   **"Silence of the Lambs"**.
 
-### Step 5 – Exploitation
+**Step 5 – Exploitation**
 
 - Retour sur la page _Forgot my password_.
-- Entrée de la réponse : **Silence of the Lambs**.
+- Entrée de la réponse de la question secrète: **Silence of the Lambs**.
 - Définition d'un nouveau mot de passe.
 - Réinitialisation réussie → accès au compte.
 
-### Outils utilisés
+## Outils utilisés
 
 - Navigateur Web
 
@@ -43,17 +43,24 @@
 
 - Outils OSINT / recherche Google
 
-- DevTools
-
 ---
 
 ## 2. Vulnerabilities
 
-**Vulnerability** : Broken Access Control -- Weak Personal Question /
-OSINT-Based Account Takeover\
-**Affected component** : Password reset system\
-**Severity:**  
-**Critical**
+**Vulnerability:**
+
+- Sensitive Data Exposure
+- Broken Access Control
+- Weak Personal Question
+- OSINT-Based Account Takeover
+
+**Affected component:**
+
+- Password reset system
+
+**Severity:**
+
+- **Critical**
 
 ---
 
@@ -72,7 +79,7 @@ OSINT-Based Account Takeover\
 
 - Supprimer les questions secrètes basées sur des informations
   publiques.
-- Utiliser MFA ou un lien de récupération unique et sécurisé.
+- Utiliser l'authentification multifacteur (MFA) ou un lien de récupération unique et sécurisé.
 - Vérifier l'identité via email ou téléphone.
 
 **Remediation Fix**
@@ -91,6 +98,9 @@ OSINT-Based Account Takeover\
 ---
 
 ## 5. Evidence
+
+**Site OWASP Authentification**
+https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
 
 **Wayback Machine snapshot**
 ![Wayback Machine snapshot](../image/Wayback_Machine.png)

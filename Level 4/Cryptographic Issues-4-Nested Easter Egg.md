@@ -66,6 +66,7 @@
 
 **Vulnerability name :**
 
+- Cryptographic Issues
 - Security Misconfiguration
 - Poison Null Byte Injection
 - Sensitive File Exposure
@@ -73,9 +74,8 @@
 
 **Affected component :**
 
-- FTP browsing (`/ftp`)
-- File download handler
-- Encoded hint storage
+- Navigation FTP (`/ftp`)
+- Gestionnaire de téléchargement de fichiers
 
 **Severity :**
 
@@ -109,7 +109,8 @@
 **Best Practices**
 
 - Séparer contenu public et fichiers internes dans deux environnements distincts.
-- Activer un WAF pour détecter des patterns d’exploitation.
+- Ne jamais exposer directement des répertoires serveurs.
+- Mettre en place un **WAF** (Web Application Firewall) pour bloquer les Null Byte injections.
 - Toujours encoder et valider les chemins de fichiers envoyés par les utilisateurs.
 
 ---
