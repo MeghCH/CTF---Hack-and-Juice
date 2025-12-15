@@ -14,7 +14,7 @@
 - Passer Intercept sur ON.
 - Revenir sur le site et cliquer sur Register pour envoyer la requête.
 
-**Step 3 – Envoyer la requête à Repeater\***
+**Step 3 – Envoyer la requête à Repeater**
 
 - Aller dans Burp → Proxy.
 - Trouver la requête POST d’inscription.
@@ -36,12 +36,12 @@
 
 - La réponse du serveur contient :  
   "status": "success"  
-  → Le XSS est accepté, la protection côté client est contournée.  
-  Challenge validé.
+  → Le XSS est accepté, la protection côté client est contournée.
+- Challenge validé.
 
 **Outils utilisés :**
 
-- Burp Suite (Proxy + Intruder)
+- Burp Suite (Proxy + Repeater)
 
 ---
 
@@ -50,25 +50,22 @@
 **Vulnerability name:**
 
 - XSS persistant (Stored XSS)
-- Validation insuffisante côté client
-- Entrée utilisateur non filtrée
 
 **Composant affecté :**
 
-- Endpoint d’enregistrement utilisateur `/api/Users/`
+- Endpoint de l'API d’enregistrement utilisateur
 - Champ JSON "email"
 
 **Severity:**
 
-**High**
+- **High**
 
 ---
 
 ## 3. Risks
 
-- Exécution de JavaScript arbitraire dans le navigateur des utilisateurs.
+- Exécution de JavaScript malveillant dans le navigateur des utilisateurs.
 - Vol de cookies et de tokens JWT.
-- Redirections malveillantes.
 - Injection persistante dans la base utilisateur.
 - Fuite d’informations et compromission du site.
 
@@ -76,19 +73,19 @@
 
 ## 4. Actions
 
-### Mitigation
+**Mitigation**
 
 - Ne jamais se fier à la validation côté client.
 - Filtrer toutes les entrées côté serveur.
 - Supprimer ou échapper les balises HTML dangereuses.
 
-### Remediation
+**Remediation**
 
 - Encoder automatiquement `<`, `>`, `"`, `'`.
-- Utiliser un moteur de sanitization robuste.
+- Utiliser un moteur de sanitisation robuste.
 - Vérifier que le champ email contient un email valide.
 
-### Best Practices
+**Best Practices**
 
 - Mettre en place une Content Security Policy (CSP).
 - Auditer régulièrement les formulaires du site.

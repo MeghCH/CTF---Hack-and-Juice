@@ -66,7 +66,7 @@ Samuel
 
 **Affected component:**
 
-- Password reset process (`/rest/user/reset-password`)
+- Password reset process
 - Secret question mechanism
 
 **Severity:**
@@ -93,9 +93,9 @@ Samuel
 
 **Remediation fixes:**
 
-- Ajouter une étape MFA (code SMS ou email).
+- Ajouter une étape MFA (Authentification multifacteur) -> code SMS ou email.
 - Générer un token temporaire obligatoire pour le reset.
-- Interdire les réponses triviales ou trouvables via OSINT.
+- Interdire les réponses trouvables via OSINT.
 
 **Best security practices:**
 

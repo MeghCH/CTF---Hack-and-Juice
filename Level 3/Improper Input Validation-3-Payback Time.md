@@ -14,12 +14,12 @@
 **Step 3 – Préparer Burp Suite**
 
 - Ouvrir **Burp Suite**.
-- Aller dans **Proxy** → mettre **Intercept OFF** pour ne pas tout capturer au début.
+- Aller dans **Proxy** → cliquer sur **Intercept OFF** pour le passer en ON.
 
 **Step 4 – Interception de la modification du panier**
 
 - Sur la page web, cliquer sur le bouton **+** dans le panier pour augmenter la quantité.
-- Activer immédiatement **Intercept ON** dans Burp Proxy.
+- Retourner sur Burp Proxy.
 - La requête interceptée ressemble à :
 
 PUT /api/BasketItems/1  
@@ -48,8 +48,8 @@ Content-Type: application/json
 **Step 7 – Procéder au paiement**
 
 - Ajouter une adresse :
-  - Name : NA
-  - Street : NA
+  - Name : ST
+  - Street : ST
   - ZIP : 12345678
 - Choisir la livraison **One Day Delivery**.
 - Cliquer sur **Pay**.
@@ -67,19 +67,20 @@ La commande passe même avec un montant négatif → challenge validé.
 
 ## 2. Vulnerabilities
 
-**Vulnerability name :**
+**Vulnerability name:**
 
+- Improper Input Validation
 - Broken Access Control
 - Price Manipulation
-- Integer Underflow / Logic Flaw
 
-**Affected component :**
+**Affected component:**
 
-- Basket Update API (`/api/BasketItems/`)
+- Basket Update API
 - Order calculation logic
 
-**Severity :**
-**Critical** = permet de manipuler le prix et contourner le paiement.
+**Severity:**
+
+- **Critical** = permet de manipuler le prix et contourner le paiement.
 
 ---
 
@@ -87,7 +88,6 @@ La commande passe même avec un montant négatif → challenge validé.
 
 - Achats gratuits ou création de montants négatifs.
 - Perte financière directe.
-- Exploit trivial et reproductible.
 - Compromission de la logique de facturation.
 - Dégradation de la crédibilité de l'application.
 

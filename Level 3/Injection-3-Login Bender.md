@@ -5,7 +5,7 @@
 **Step 1 – Trouver l’email de Bender**
 
 - Sur Juice Shop, les emails suivent souvent le même modèle.
-- L’email de Bender est généralement :
+- L’email de Bender est:
 
 bender@juice-sh.op
 
@@ -17,7 +17,8 @@ bender@juice-sh.op
   Password : `1234` ou autre mot de passe simple.
 - Résultat : échec → le mot de passe n’est pas correct.
 
-**Step 3 – Tenter une injection SQL**  
+**Step 3 – Tenter une injection SQL**
+
 Comme pour d’autres challenges similaires (ex : Login Jim), on injecte un commentaire SQL pour contourner la vérification du mot de passe.
 
 - Modifier l’email comme suit :
@@ -28,13 +29,18 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 
 **Step 4 – Connexion**
 
-- Entrer n’importe quel mot de passe (ou laisser vide).
+- Entrer n’importe quel mot de passe.
 - Cliquer sur Login.
 - La connexion **réussit immédiatement** grâce à la SQL Injection.
 
-**Résultat :**  
+**Résultat:**
+
 → Le compte de Bender est accessible **sans connaître son mot de passe**.  
 → Challenge validé.
+
+## Outils utilisés :
+
+- Navigateur Web
 
 ---
 
@@ -48,12 +54,12 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 
 **Affected component:**
 
-- Login API endpoint (`/rest/user/login`)
+- Login API endpoint
 - Back-end SQL query using the email field
 
 **Severity:**
 
-**Critical**
+- **Critical**
 
 ---
 
@@ -71,7 +77,7 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 
 **Risk Mitigation:**
 
-- Interdire toute concaténation directe de données utilisateur dans des requêtes SQL.
+- Ne jamais concaténer des données utilisateur dans une requête SQL.
 - Utiliser des requêtes préparées (prepared statements).
 - Valider strictement les entrées utilisateur (format email).
 
@@ -84,7 +90,7 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 **Best security practices:**
 
 - Ajouter une authentification multifacteur.
-- Mettre en place un WAF pour détecter la SQLi.
+- Mettre en place un WAF (Web Application Firewall) pour détecter la SQL.
 - Réaliser des tests réguliers d’injection.
 
 ---

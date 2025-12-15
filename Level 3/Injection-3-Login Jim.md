@@ -1,4 +1,4 @@
-**_Injection – Level 3 – Login Jim (SQL Injection)_**
+**_Injection – Level 3 – Login Jim_**
 
 ## 1. Methodology
 
@@ -26,13 +26,17 @@ jim@juice-sh.op'--
 
 **Step 4 – Valider la connexion**
 
-- Entrer n’importe quel mot de passe (ou rien du tout).
+- Entrer n’importe quel mot de passe.
 - Cliquer sur Login.
 - La connexion **réussit**, car la condition SQL devient vraie grâce au commentaire.
 
 **Résultat :**  
 → Connexion réussie **sans mot de passe**, grâce à une **SQL Injection basique**.  
 → Challenge validé.
+
+## Outils utilisés :
+
+- Navigateur Web
 
 ---
 
@@ -41,17 +45,17 @@ jim@juice-sh.op'--
 **Vulnerability name:**
 
 - SQL Injection
-- Improper Input Validation
 - Authentication Bypass
+- Improper Input Validation
 
 **Affected component:**
 
-- Login endpoint `/rest/user/login`
+- Login API endpoint
 - Backend SQL query handling (email field)
 
 **Severity:**
 
-**Critical**
+- **Critical**
 
 ---
 
@@ -80,9 +84,9 @@ jim@juice-sh.op'--
 
 **Best security practices:**
 
-- Implémenter un WAF pour détecter les signatures SQLi.
+- Implémenter un WAF (Web Application Firewall) pour détecter les signatures SQL.
 - Effectuer des tests automatisés contre les injections.
-- Utiliser une authentification renforcée (MFA).
+- Utiliser une authentification renforcée multi-facteurs (MFA).
 
 ---
 

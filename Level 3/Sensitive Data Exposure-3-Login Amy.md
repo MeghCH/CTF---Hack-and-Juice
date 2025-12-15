@@ -23,12 +23,9 @@ Content-Type: application/json
 
 - Clic droit → **Send to Intruder**.
 
----
+**Step 3 – Intruder Attack Configuration**
 
-## 3. Intruder Attack Configuration
-
-**Step 3 – Modifier les positions (Payload Positions)**
-
+- Modifier les positions (Payload Positions)
 - Aller dans **Intruder → Positions**.
 - Entourer chaque lettre du mot de passe par un `$` pour indiquer à Burp qu’il doit tester des combinaisons.  
   Exemple :
@@ -43,11 +40,7 @@ Chaque `$` représente une position qui sera testée automatiquement.
    **Cluster Bomb**  
   Ce type permet de tester toutes les combinaisons possibles entre plusieurs positions.
 
----
-
-## 4. Payload Configuration
-
-**Step 5 – Payload Sets**
+**Step 5 – Payload Configuration -> Payload Sets**
 
 - Dans **Payload Set : 3** (ou celui correspondant à la 3e position), sélectionner :
   - **Payload type : Simple list**
@@ -66,21 +59,14 @@ G
 
 Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 
----
-
-## 5. Lancement de l’attaque
-
-**Step 7 – Start Attack**
+**Step 7 – Lancement de l’attaque**
 
 - Cliquer sur **Start attack**.
 - Burp Intruder lance alors toutes les permutations possibles entre les positions.
 
----
+**Step 8 – Analyse des résultats**
 
-## 6. Analyse des résultats
-
-**Step 8 – Trouver la réponse valide**
-
+- Trouver la réponse valide
 - Lorsque l’attaque est terminée, chercher dans les résultats une requête ayant une **Response Length différente** ou un **Code 200** au lieu d’une erreur.
 - Le mot de passe correct apparaît dans une réponse dont le **body commence par :**  
   **KIF**
@@ -96,13 +82,12 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 
 **Vulnerability name:**
 
-- Weak Authentication / No Rate Limiting
+- Sensitive Data Exposure
 - Brute Force Attack via Burp Intruder
-- Broken Authentication
 
 **Affected component:**
 
-- Login endpoint (`/rest/user/login`)
+- Login API endpoint
 
 **Severity:**
 
@@ -136,8 +121,8 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 **Best Practices**
 
 - Journaliser les tentatives d’authentification.
-- Déployer une solution WAF capable de bloquer les attaques rapides.
-- Activer MFA pour tous les comptes sensibles.
+- Déployer une solution WAF (Web Application Firewall) capable de bloquer les attaques rapides.
+- Activer MFA (Authentification multi-facteurs) pour tous les comptes sensibles.
 
 ---
 

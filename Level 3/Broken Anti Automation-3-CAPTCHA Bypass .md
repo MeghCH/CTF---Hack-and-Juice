@@ -11,7 +11,7 @@ https://juice-shop.example.com/#/feedback
 
 **Step 2 – Premier test**
 
-- Saisie du commentaire : `Hi`
+- Saisie du commentaire : `Hey`
 - Attribution d’une note de **3 étoiles**
 - Résolution du **captcha** manuellement
 - Soumission du formulaire pour observer le comportement normal de la requête.
@@ -46,7 +46,7 @@ https://juice-shop.example.com/#/feedback
 **Step 7 – Validation**
 
 - Retour sur la page web → “All Products”.
-- Challenge validé : **Broken Access Control / Rate Limiting / CAPTCHA Weakness**.
+- Challenge validé.
 
 ## Outils utilisés :
 
@@ -60,17 +60,22 @@ https://juice-shop.example.com/#/feedback
 
 **Vulnerability name:**
 
-- Broken Access Control / Weak CAPTCHA Enforcement / Rate Limiting Bypass  
-  **Affected component:**
-- Feedback submission API endpoint  
-  **Severity:**
+- Broken Anti Automation
+- Weak CAPTCHA Enforcement
+
+**Affected component:**
+
+- Endpoint de soumission de feedback
+
+**Severity:**
+
 - **High** = permet un envoi massif de requêtes malgré un captcha censé limiter le spam
 
 ---
 
 ## 3. Risks
 
-- Possibilité d’abuser du système de feedback (spam, flood).
+- Possibilité d’abuser du système de feedback (spam).
 - Captcha inefficace → automatisation possible via scripts ou Burp Intruder.
 - Peut mener à une **pollution de la base de données** (feedbacks multiples inutiles).
 - Impact : dégradation du service, atteinte à la crédibilité de la plateforme.
@@ -79,23 +84,23 @@ https://juice-shop.example.com/#/feedback
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Mettre en place une **vérification serveur du captcha**, pas seulement côté client.
 - Implémenter une **limitation du nombre de requêtes par IP ou utilisateur** (rate limiting).
 - Introduire des **tokens CSRF** ou des **challenges dynamiques**.
 
-### Remediation Fix
+**Remediation Fix**
 
 - Valider chaque requête de feedback via un **captcha unique et consommable une seule fois**.
 - Rejeter les requêtes répétées ou suspectes en analysant les entêtes.
 - Enregistrer un log d’activité suspecte et notifier les administrateurs.
 
-### Best Practices
+**Best Practices**
 
 - Ne jamais se fier à la seule vérification côté client (JavaScript).
 - Déployer des protections automatiques type **reCAPTCHA v3** ou **hCaptcha**.
-- Configurer des règles WAF pour détecter le flood de requêtes répétées.
+- Configurer des règles WAF (Web Application Firewall) pour détecter le flood (inondation) de requêtes répétées.
 
 ---
 
@@ -106,7 +111,7 @@ https://juice-shop.example.com/#/feedback
 POST /api/Feedbacks/
 Content-Type: application/json
 {
-"comment": "Hellloooooo",
+"comment": "Hallloooooo",
 "rating": 3,
 "captcha": "ab12cd"
 }

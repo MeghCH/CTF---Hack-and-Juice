@@ -31,6 +31,8 @@ Content-Type: application/json
 **Step 4 – Vérification du rôle retourné**  
 Dans Repeater → Send :
 
+- Aller dans l'onglet **Raw** de Burp
+
 Réponse :
 
 {  
@@ -59,9 +61,10 @@ Réponse :
 - Puis Drop
 - Désactiver Intercept OFF
 
-**Step 6 – Validation**  
-Le compte créé devient administrateur.  
-Challenge validé.
+**Step 6 – Validation**
+
+- Le compte créé devient administrateur.
+- Challenge validé.
 
 ## Outils utilisés :
 
@@ -77,11 +80,16 @@ Challenge validé.
 
 **Vulnerability name:**
 
-- Broken Access Control / Privilege Escalation  
-  **Affected component:**
-- User registration API (/api/Users/)  
-  **Severity :**
-  **High** = L’API accepte un champ "role" non prévu et fait confiance aux données envoyées par l’utilisateur.
+- Improper Input Validation
+- Broken Access Control
+
+**Affected component:**
+
+- User registration API
+
+**Severity :**
+
+- **High** = L’API accepte un champ "role" non prévu et fait confiance aux données envoyées par l’utilisateur.
 
 ---
 
@@ -91,25 +99,24 @@ Challenge validé.
 - Compromission totale de l’application
 - Accès aux données sensibles
 - Perte de contrôle du système
-- Impact business majeur
 
 ---
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Filtrer les champs JSON côté serveur
 - Ignorer les rôles envoyés depuis le client
 - Forcer systématiquement le rôle “customer”
 
-### Remediation Fix
+**Remediation Fix**
 
 - Supprimer toute prise en charge du champ "role" côté client
 - Validation serveur stricte des entrées utilisateur
 - Contrôle d’accès renforcé
 
-### Best Practices
+**Best Practices**
 
 - Ne jamais faire confiance aux données client
 - Gestion interne des rôles sur le backend uniquement

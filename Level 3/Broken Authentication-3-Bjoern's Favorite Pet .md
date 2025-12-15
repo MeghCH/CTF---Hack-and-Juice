@@ -38,19 +38,16 @@ Dans la démonstration, les informations affichées sont :
   - Email : (celui récupéré dans la review)
   - Réponse secrète : `Zaya`
 - Valider et saisir un **nouveau mot de passe** pour le compte de Bjoern.
-
-**Résultat :**  
-Vous êtes maintenant en mesure de vous connecter avec le **compte de Bjoern**, challenge validé.
+- On peut se connecter avec le compte de Bjoern.
+- Challenge validé.
 
 ## Outils utilisés :
 
 - Navigateur Web
 
-- Recherche Google
+- Recherche Google / OSINT appliqué aux informations publiques
 
 - YouTube (présentation officielle de Björn Kimminich)
-
-- OSINT appliqué aux informations publiques
 
 ---
 
@@ -59,7 +56,6 @@ Vous êtes maintenant en mesure de vous connecter avec le **compte de Bjoern**, 
 **Vulnerability name:**
 
 - Broken Authentication / Weak Secret Questions
-- OSINT-based account takeover
 
 **Affected component:**
 
@@ -77,26 +73,25 @@ Vous êtes maintenant en mesure de vous connecter avec le **compte de Bjoern**, 
 - Escalade potentielle si le compte a des privilèges importants.
 - Exposition de données personnelles.
 - Réputation : un attaquant peut agir “au nom” d’un utilisateur réel.
-- Attaque triviale à reproduire avec du simple OSINT.
 
 ---
 
 ## 4. Actions
 
-### Risk Mitigation
+**Risk Mitigation**
 
 - Supprimer l’usage des questions secrètes statiques.
 - Remplacer par des mécanismes modernes :
   - Reset par email avec token à usage unique
-  - MFA (authentification multi-facteurs)
+  - MFA (Authentification multi-facteurs)
 
-### Remediation Fix
+**Remediation Fix**
 
 - Ne plus stocker de réponses statiques et prévisibles.
 - Introduire un système de reset basé sur un **jeton chiffré**, expirant rapidement.
 - Vérifier systématiquement l’identité par email ou SMS.
 
-### Best Practices
+**Best Practices**
 
 - Éviter les questions secrètes trop simples ou trouvables via OSINT.
 - Ne jamais réutiliser des questions de sécurité démontrées publiques.

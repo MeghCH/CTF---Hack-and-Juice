@@ -32,7 +32,7 @@
 
       mat-button-disabled
 
-- Le bouton devient actif.
+- Le bouton devient actif (bleu).
 
 **Step 5 – Interception avec Burp Suite**
 
@@ -56,7 +56,7 @@
 **Step 7 – Validation**
 
 - Le paiement est accepté.
-- Le challenge **Deluxe Fraud – Level 3** est validé.
+- Le challenge est validé.
 
 ## Outils utilisés :
 
@@ -68,10 +68,18 @@
 
 ## 2. Vulnerabilities
 
-**Vulnerability** : Broken Access Control / Client-Side Enforcement\
-**Affected component** : Système de paiement Deluxe\
-**Severity:**  
-**Medium à High**
+**Vulnerability:**
+
+- Improper Input Validation
+- Broken Access Control
+
+**Affected component:**
+
+- Système de paiement Deluxe
+
+**Severity:**
+
+- **Medium/Hard**
 
 ---
 
@@ -97,7 +105,7 @@
 
 **Best Practices**
 
-- Logique métier uniquement côté serveur.
+- Logique métier (l’ensemble des règles et comportements propres à ton activité que l’application doit respecter) uniquement côté serveur.
 - Journalisation et monitoring.
 - Tests réguliers de fraude.
 

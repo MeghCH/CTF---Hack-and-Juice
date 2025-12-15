@@ -72,7 +72,7 @@
 
 - Retourner sur All Products.
 - Ouvrir la fiche du produit Banana.
-- Le JavaScript s’exécute → **XSS validé**.
+- Le JavaScript s’exécute → **Challenge validé**.
 
 ## Outils utilisés :
 
@@ -90,7 +90,7 @@
 
 **Composant affecté :**
 
-- Endpoint de l’API Produit : `/api/Products/:id`
+- Endpoint de l’API Produit
 - Champ “description” du produit (entrée utilisateur non filtrée)
 
 **Severity:**
@@ -110,18 +110,18 @@
 
 ## 4. Actions
 
-### Mitigation
+**Mitigation**
 
 - Valider toutes les entrées côté serveur.
 - Bloquer les balises HTML dangereuses.
 - Restreindre la modification des produits aux admins.
 
-### Remediation
+**Remediation**
 
 - Encoder automatiquement `<` `>` `'` `"` dans les champs texte.
 - Utiliser un système de sanitisation robuste.
 
-### Best Practices
+**Best Practices**
 
 - Zero trust sur les données client.
 - Scans et tests XSS réguliers.
