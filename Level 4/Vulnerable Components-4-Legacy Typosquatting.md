@@ -61,12 +61,16 @@
 - Soumission du formulaire.
 - Le challenge est validé.
 
+## Techniques utilisées:
+
+- Forced browsing
+- Null Byte Injection
+- OSINT (dependency reconnaissance)
+
 ## Outils utilisés :
 
 - Navigateur web
-
 - Encodage d’URL (%2500)
-
 - Recherche Google / OSINT
 
 ---
@@ -84,7 +88,7 @@
 
 **Severity:**
 
-- **High**
+- **High** = la divulgation de dépendances internes facilite des attaques ciblées et de type supply chain.
 
 ---
 

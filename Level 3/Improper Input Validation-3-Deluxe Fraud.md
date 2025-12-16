@@ -58,10 +58,15 @@
 - Le paiement est accepté.
 - Le challenge est validé.
 
+## Techniques utilisées :
+
+- Client-side control bypass
+- Parameter tampering
+- Business logic abuse
+
 ## Outils utilisés :
 
 - Devtools
-
 - Burp Suite (Proxy)
 
 ---
@@ -79,7 +84,7 @@
 
 **Severity:**
 
-- **Medium/Hard**
+- **High**
 
 ---
 
@@ -88,6 +93,7 @@
 - Fraude financière.
 - Accès non autorisé à un service payant.
 - Perte économique et atteinte à la réputation.
+- Impact business: Perte financière
 
 ---
 
@@ -102,6 +108,14 @@
 
 - Vérification stricte de la méthode de paiement côté backend.
 - Rejet des paramètres incohérents.
+
+**Example:** vérifier le paiement côté serveur avant d’activer le statut Deluxe
+
+```js
+if (!paymentConfirmed(userId)) {
+  return res.status(403).json({ error: "Payment required" });
+}
+```
 
 **Best Practices**
 

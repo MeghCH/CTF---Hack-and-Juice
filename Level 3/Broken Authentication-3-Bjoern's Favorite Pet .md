@@ -41,12 +41,15 @@ Dans la démonstration, les informations affichées sont :
 - On peut se connecter avec le compte de Bjoern.
 - Challenge validé.
 
+## Techniques utilisées :
+
+- Type: OSINT + Exploitation de questions de sécurité faibles (social engineering passif).
+- Objectif: La récupération du mot de passe repose sur une question de sécurité dont la réponse est publiquement accessible, rendant le mécanisme inefficace.
+
 ## Outils utilisés :
 
 - Navigateur Web
-
 - Recherche Google / OSINT appliqué aux informations publiques
-
 - YouTube (présentation officielle de Björn Kimminich)
 
 ---
@@ -55,7 +58,8 @@ Dans la démonstration, les informations affichées sont :
 
 **Vulnerability name:**
 
-- Broken Authentication / Weak Secret Questions
+- Broken Authentication
+- Weak Security Questions
 
 **Affected component:**
 
@@ -72,7 +76,7 @@ Dans la démonstration, les informations affichées sont :
 - Compromission complète du compte de Bjoern.
 - Escalade potentielle si le compte a des privilèges importants.
 - Exposition de données personnelles.
-- Réputation : un attaquant peut agir “au nom” d’un utilisateur réel.
+- Impact business : perte de confiance client et atteinte à la réputation.
 
 ---
 

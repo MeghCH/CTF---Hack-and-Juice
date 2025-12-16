@@ -48,10 +48,14 @@ Samuel
 - Entrer l’email de Jim et le nouveau mot de passe.
 - Connexion réussie → challenge validé.
 
+## Techniques utilisées :
+
+- Type: OSINT passif et exploitation d’une faiblesse dans la procédure de récupération de mot de passe.
+- Objectif: L’attaquant collecte des informations publiques permettant de deviner la réponse à une question secrète.
+
 ## Outils utilisés :
 
 - Navigateur Web
-
 - Recherche google
 
 ---
@@ -80,6 +84,7 @@ Samuel
 - Absence de protection supplémentaire (pas d’email de confirmation, pas de token).
 - Possibilité de prise de contrôle de comptes utilisateurs.
 - Risques importants pour la confidentialité des données.
+- Impact business: perte de confiance des utilisateurs.
 
 ---
 
@@ -96,6 +101,14 @@ Samuel
 - Ajouter une étape MFA (Authentification multifacteur) -> code SMS ou email.
 - Générer un token temporaire obligatoire pour le reset.
 - Interdire les réponses trouvables via OSINT.
+
+**Exemple:** reset sécurisé via token
+
+```js
+if (!verifyToken(req.body.token)) {
+  return res.status(403).json({ error: "Invalid or expired token" });
+}
+```
 
 **Best security practices:**
 

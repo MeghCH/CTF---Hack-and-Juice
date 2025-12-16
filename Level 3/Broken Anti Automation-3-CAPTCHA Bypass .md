@@ -1,4 +1,4 @@
-**_Broken Anti Automation – Level 4 – CAPTCHA Bypass_**
+**_Broken Anti Automation – Level 3 – CAPTCHA Bypass_**
 
 ## 1. Methodology
 
@@ -48,10 +48,14 @@ https://juice-shop.example.com/#/feedback
 - Retour sur la page web → “All Products”.
 - Challenge validé.
 
+## Techniques utilisées :
+
+- Type: manual testing + intercept/replay attack (anti-automation test)
+- Objectif: vérifier si le captcha est validé côté client ou serveur
+
 ## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
-
 - Bloc-notes
 
 ---
@@ -66,6 +70,7 @@ https://juice-shop.example.com/#/feedback
 **Affected component:**
 
 - Endpoint de soumission de feedback
+- Mécanisme de validation du CAPTCHA côté client (non vérifié côté serveur)
 
 **Severity:**
 
@@ -95,6 +100,14 @@ https://juice-shop.example.com/#/feedback
 - Valider chaque requête de feedback via un **captcha unique et consommable une seule fois**.
 - Rejeter les requêtes répétées ou suspectes en analysant les entêtes.
 - Enregistrer un log d’activité suspecte et notifier les administrateurs.
+
+**Exemple:** Vérification du captcha côté serveur
+
+```js
+if (!verifyCaptcha(req.body.captcha)) {
+  return res.status(400).json({ error: "Invalid CAPTCHA" });
+}
+```
 
 **Best Practices**
 

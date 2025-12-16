@@ -38,10 +38,17 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 - **Poison Null Byte**
 - **Error Handling / Git Exposure**
 
+##Techniques utilisées :
+
+- Directory enumeration (accès au répertoire `/ftp`)
+- Security misconfiguration exploitation
+- Poison Null Byte Injection
+- File extension bypass
+- Unrestricted file access
+
 ## Outils utilisés :
 
 - Navigateur web
-
 - URL encoding tool (pour générer `%2500`)
 
 ---
@@ -74,6 +81,7 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 - Lecture de données sensibles ou potentiellement critiques.
 - Risque d’exposition de chemins, secrets ou de fichiers de configuration.
 - Dégradation de la sécurité générale du serveur.
+- Impact business : exposition de fichiers internes pouvant révéler des informations sensibles, entraînant une perte de confiance des utilisateurs et un risque réputationnel.
 
 ---
 
@@ -90,6 +98,25 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 - Utiliser des fonctions sûres pour gérer les chemins de fichiers.
 - Nettoyer les entrées afin de supprimer les Null Bytes.
 - Désactiver la page `/ftp` ou la protéger via authentification.
+
+**Exemple:** sécurisation du nom de fichier
+
+```js
+function isValidFilename(filename) {
+  // Rejette les null bytes et caractères suspects
+  if (filename.includes("\0") || filename.includes("%00")) {
+    return false;
+  }
+
+  // Autorise uniquement certaines extensions
+  const allowedExtensions = [".md", ".txt"];
+  return allowedExtensions.some((ext) => filename.endsWith(ext));
+}
+
+if (!isValidFilename(requestedFile)) {
+  return res.status(400).json({ error: "Invalid file name" });
+}
+```
 
 **Best security practices:**
 

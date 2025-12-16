@@ -52,12 +52,18 @@
 - On a trouvé un Easter Egg caché dans un autre Easter Egg (d’où le nom _Nested_).
 - Challenge validé !
 
+## Techniques utilisées :
+
+- Security Misconfiguration Exploitation
+- Poison Null Byte Injection
+- Sensitive File Disclosure
+- Weak Cryptography
+- Chained Decoding Technique
+
 ## Outils utilisés :
 
 - Navigateur web
-
 - Base64 Decode Tool
-
 - ROT13 Tool
 
 ---
@@ -79,7 +85,7 @@
 
 **Severity :**
 
-- **Medium / High** = accès non autorisé à des fichiers internes + contournement du serveur.
+- **Medium** = accès non autorisé à des fichiers internes + contournement du serveur.
 
 ---
 
@@ -89,6 +95,7 @@
 - Possibilité de découvrir d'autres endpoints cachés ou sensibles.
 - Démonstration d’une absence de filtrage sur les noms de fichiers.
 - Potentiel d’attaques plus graves (directory traversal, disclosure, etc.).
+- Inpact business: fuite d’informations internes pouvant compromettre la sécurité globale et la crédibilité de l’entreprise.
 
 ---
 

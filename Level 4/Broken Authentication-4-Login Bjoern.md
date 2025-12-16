@@ -50,10 +50,14 @@
 - Entrer l’email trouvé et le nouveau mot de passe défini.
 - Le login réussit → challenge validé.
 
+## Techniques utilisées :
+
+- OSINT-based Account Takeover via Weak Password Recovery
+- Authentication Bypass via Password Reset Abuse
+
 ## Outils utilisés :
 
 - Navigateur Web
-
 - OSINT : recherche Google, YouTube
 
 ---
@@ -99,6 +103,14 @@
 - Utiliser des tokens signés, expirant rapidement.
 - Exiger un second facteur pour la réinitialisation de mots de passe sensibles.
 - Empêcher l’utilisation d’informations publiques comme questions secrètes.
+
+**Exemple:** contrôle de sécurité côté serveur utilisé lors d’une réinitialisation de mot de passe sécurisée
+
+```js
+if (!isValidResetToken(token)) {
+  return res.status(403).json({ error: "Invalid or expired token" });
+}
+```
 
 **Best Practices**
 

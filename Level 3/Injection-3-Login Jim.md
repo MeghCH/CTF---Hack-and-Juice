@@ -34,6 +34,11 @@ jim@juice-sh.op'--
 → Connexion réussie **sans mot de passe**, grâce à une **SQL Injection basique**.  
 → Challenge validé.
 
+## Technique utilisée :
+
+- SQL Injection
+- Comment-based injection (`--`)
+
 ## Outils utilisés :
 
 - Navigateur Web
@@ -65,6 +70,7 @@ jim@juice-sh.op'--
 - Possibilité d’accéder à des comptes sensibles (ex. administrateurs).
 - Exfiltration potentielle des données utilisateurs.
 - Compromission complète du système d’authentification.
+- Impact business: Risque légal en cas de fuite de données (RGPD)+ mauvaise réputation
 
 ---
 
@@ -81,6 +87,13 @@ jim@juice-sh.op'--
 - Nettoyer les caractères spéciaux (`'`, `"`, `--`, `;`).
 - Appliquer un filtrage serveur (whitelist).
 - Empêcher les commentaires SQL dans les champs utilisateur.
+
+**Exemple:** exemple typique d’un correctif contre la SQL Injection
+
+```js
+const query = "SELECT * FROM users WHERE email = ? AND password = ?";
+db.execute(query, [email, password]);
+```
 
 **Best security practices:**
 

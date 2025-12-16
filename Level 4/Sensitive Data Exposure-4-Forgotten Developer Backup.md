@@ -45,12 +45,17 @@
 
 ---
 
+## Techniques utilisées :
+
+- Information Disclosure
+- Poison Null Byte Injection
+- File Extension Filter Bypass
+- Security Misconfiguration Exploitation
+
 ## Outils utilisés
 
 - Navigateur web
-
 - Encodage d'URL (%2500)
-
 - OSINT basique
 
 ---
@@ -78,6 +83,7 @@
 - Fuite d'informations internes.
 - Aide à la reconnaissance d'attaques.
 - Augmentation de la surface d'attaque.
+- Impact business : exposition d’informations internes pouvant faciliter des attaques ciblées + perte de confiance des utilisateurs.
 
 ---
 
@@ -93,6 +99,14 @@
 - Validation stricte des extensions.
 - Normalisation des chemins.
 - Stockage hors racine web.
+
+**Exemple:** bloquer les noms de fichiers incluant des Null Bytes (\0)
+
+```js
+if (filename.includes("\0") || filename.includes("%00")) {
+  return res.status(400).json({ error: "Invalid filename" });
+}
+```
 
 **Best Practices**
 

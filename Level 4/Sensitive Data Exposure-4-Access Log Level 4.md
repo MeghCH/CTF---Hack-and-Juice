@@ -29,6 +29,13 @@ internes, - messages d'erreur, - données sensibles.
 
 Le challenge se valide après le téléchargement du fichier.
 
+## Techniques utilisées :
+
+- Forced browsing
+- Direct object access
+- Information disclosure
+- Broken access control testing
+
 ---
 
 ## 2. Vulnerabilities
@@ -42,11 +49,11 @@ Le challenge se valide après le téléchargement du fichier.
 **Affected component:**
 
 - Route `/support/logs` et système de
-  journalisation\
+  journalisation
 
 **Severity:**
 
-- **High / Critical**
+- **High**
 
 ---
 
@@ -72,6 +79,14 @@ Le challenge se valide après le téléchargement du fichier.
 - Ajouter un middleware d'autorisation.
 - Bloquer l'accès direct aux fichiers internes.
 - Revoir la configuration serveur.
+
+**Exemple:** middleware d’autorisation
+
+```js
+if (!user || user.role !== "admin") {
+  return res.status(403).json({ error: "Access denied" });
+}
+```
 
 **Best Practices**
 

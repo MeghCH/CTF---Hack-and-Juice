@@ -35,6 +35,12 @@
 - Définition d'un nouveau mot de passe.
 - Réinitialisation réussie → accès au compte.
 
+## Techniques utilisées :
+
+- OSINT (Open Source Intelligence)
+- Account Takeover via Weak Password Recovery
+- Information disclosure from archived public data
+
 ## Outils utilisés
 
 - Navigateur Web
@@ -49,8 +55,8 @@
 
 **Vulnerability:**
 
-- Sensitive Data Exposure
-- Broken Access Control
+- Sensitive Data Exposure (OSINT)
+- Broken Authentication (password reset faible)
 - Weak Personal Question
 - OSINT-Based Account Takeover
 
@@ -60,7 +66,7 @@
 
 **Severity:**
 
-- **Critical**
+- **Critical** = Permet la prise de contrôle complète d’un compte sans authentification préalable.
 
 ---
 
@@ -68,7 +74,7 @@
 
 - Prise de contrôle du compte utilisateur.
 - Accès non autorisé à des données sensibles.
-- Risques business : fuite de données, perte de confiance, atteinte à
+- Impact business : fuite de données, perte de confiance, atteinte à
   la réputation.
 
 ---
@@ -87,6 +93,14 @@
 - Remplacer le système de questions secrètes.
 - Chiffrer et protéger les données de récupération.
 - Ajouter une détection d'activité suspecte sur les resets.
+
+**Exemple:** validation de token côté serveur
+
+```js
+if (!isValidResetToken(token)) {
+  return res.status(403).json({ error: "Invalid or expired token" });
+}
+```
 
 **Best Practices**
 

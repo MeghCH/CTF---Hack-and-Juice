@@ -74,6 +74,10 @@
 - Ouvrir la fiche du produit Banana.
 - Le JavaScript s’exécute → **Challenge validé**.
 
+## Techniques utilisées :
+
+- Stored XSS via API abuse
+
 ## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
@@ -85,8 +89,8 @@
 **Vulnerability name:**
 
 - Persistent (Stored) XSS
-- Improper Access Control on Product Modification
-- JSON Injection
+- Broken Access Control
+- Improper Input Validation
 
 **Composant affecté :**
 
@@ -95,7 +99,7 @@
 
 **Severity:**
 
-- **Critical**
+- **Critical** = permet l’exécution persistante de JavaScript malveillant pour tous les utilisateurs.
 
 ---
 
@@ -105,6 +109,7 @@
 - Vol de cookies et tokens JWT.
 - Défiguration du site.
 - Escalade d’attaques XSS (worms).
+- Impact business: impact réputationnel et perte de confiance des utilisateurs.
 
 ---
 
@@ -120,6 +125,17 @@
 
 - Encoder automatiquement `<` `>` `'` `"` dans les champs texte.
 - Utiliser un système de sanitisation robuste.
+
+**Exemple:** toute donnée affichée dans le navigateur doit être considérée comme non fiable
+
+```js
+const sanitizeHtml = require("sanitize-html");
+
+product.description = sanitizeHtml(req.body.description, {
+  allowedTags: [],
+  allowedAttributes: {},
+});
+```
 
 **Best Practices**
 

@@ -38,10 +38,16 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 - **Poison Null Byte**
 - **Error Handling**
 
+## Techniques utilisées :
+
+- Poison Null Byte Injection
+- Forced Browsing (Unrestricted File Access)
+- Security Misconfiguration Exploitation
+- Input Validation Bypass
+
 ## Outils utilisés :
 
 - Navigateur web
-
 - URL encoding tool (pour générer `%2500`)
 
 ---
@@ -52,8 +58,8 @@ https://juice-shop.example.com/ftp/eastere.gg%2500.md
 
 - Security Misconfiguration
 - Poison Null Byte Injection
+- File Disclosure
 - Improper Input Validation
-- Broken Acces Control
 
 **Affected component:**
 

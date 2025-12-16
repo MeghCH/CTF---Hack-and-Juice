@@ -39,7 +39,13 @@
   → Le XSS est accepté, la protection côté client est contournée.
 - Challenge validé.
 
-**Outils utilisés :**
+## Techniques utilisées :
+
+- Client-side XSS Protection Bypass
+- Stored XSS injection
+- Parameter tampering
+
+## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
 
@@ -68,6 +74,7 @@
 - Vol de cookies et de tokens JWT.
 - Injection persistante dans la base utilisateur.
 - Fuite d’informations et compromission du site.
+- Impact business: atteinte à la confiance des utilisateurs + Risque légal et conformité (RGPD)
 
 ---
 
@@ -84,6 +91,16 @@
 - Encoder automatiquement `<`, `>`, `"`, `'`.
 - Utiliser un moteur de sanitisation robuste.
 - Vérifier que le champ email contient un email valide.
+
+**Exemple:** validation stricte du champ email
+
+```js
+import validator from "validator";
+
+if (!validator.isEmail(email)) {
+  return res.status(400).json({ error: "Invalid email format" });
+}
+```
 
 **Best Practices**
 

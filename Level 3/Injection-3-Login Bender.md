@@ -38,6 +38,10 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 → Le compte de Bender est accessible **sans connaître son mot de passe**.  
 → Challenge validé.
 
+## Technique utilisée :
+
+- SQL Injection 
+
 ## Outils utilisés :
 
 - Navigateur Web
@@ -68,8 +72,7 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 - Accès non autorisé aux comptes utilisateurs.
 - Risque élevé d’accès à des comptes sensibles.
 - Possibilité d’escalade de privilèges.
-- Compromission des données utilisateurs.
-- Impact majeur sur la sécurité globale de l’application.
+- Impact business: Compromission des données utilisateurs + Impact majeur sur la sécurité globale de l’application.
 
 ---
 
@@ -86,6 +89,13 @@ Ce payload ferme la chaîne SQL puis commente la suite, ce qui annule totalement
 - Échapper les caractères dangereux (`'`, `"`, `--`, `;`).
 - Utiliser une whitelist sur les formats acceptés.
 - Implémenter un contrôle d’accès fort pour l’endpoint Login.
+
+**Exemple:** exemple typique d’un correctif contre la SQL Injection
+
+```js
+const query = "SELECT * FROM users WHERE email = ? AND password = ?";
+db.execute(query, [email, password]);
+```
 
 **Best security practices:**
 

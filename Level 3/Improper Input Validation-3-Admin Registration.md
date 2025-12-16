@@ -66,12 +66,16 @@ Réponse :
 - Le compte créé devient administrateur.
 - Challenge validé.
 
+## Techniques utilisées :
+
+- Types: Parameter tampering
+- Client-side trust abuse
+- Broken access control testing
+
 ## Outils utilisés :
 
 - Burp Suite (Proxy + Repeater)
-
 - Navigateur Web
-
 - JSON viewer
 
 ---
@@ -99,6 +103,7 @@ Réponse :
 - Compromission totale de l’application
 - Accès aux données sensibles
 - Perte de contrôle du système
+- Impact business : perte de confiance, incident de sécurité majeur, arrêt du service.
 
 ---
 
@@ -115,6 +120,16 @@ Réponse :
 - Supprimer toute prise en charge du champ "role" côté client
 - Validation serveur stricte des entrées utilisateur
 - Contrôle d’accès renforcé
+
+**Example:** Forcer le rôle côté serveur
+
+```js
+const user = {
+  email: req.body.email,
+  password: hash(req.body.password),
+  role: "customer",
+};
+```
 
 **Best Practices**
 

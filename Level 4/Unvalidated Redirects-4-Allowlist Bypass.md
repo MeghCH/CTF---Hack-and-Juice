@@ -40,6 +40,12 @@
 
 - Le challenge est validé.
 
+## Techniques utilisées :
+
+- Unvalidated Redirect exploitation
+- Allowlist bypass via substring injection
+- Business logic abuse
+
 ## Outils utilisés :
 
 - DevTools
@@ -68,6 +74,7 @@
 - Redirection vers sites malveillants.
 - Phishing facilité.
 - Perte de confiance utilisateur.
+- Impact business : campagnes de phishing crédibles pouvant entraîner des pertes financières et une atteinte à l’image de marque.
 
 ---
 

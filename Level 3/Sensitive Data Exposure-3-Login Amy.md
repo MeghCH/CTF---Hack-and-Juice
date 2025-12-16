@@ -72,18 +72,25 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
   **KIF**
 - Je copie colle ce mot de passe sur le site et le challenge est validé.
 
----
+## Techniques utilisées :
+
+- Brute-force attack
+- Credential guessing
+- Automated attack using Burp Intruder
 
 ## Outils utilisés :
 
 - Burp Suite (Proxy + Intruder)
+
+---
 
 ## 2. Vulnerabilities
 
 **Vulnerability name:**
 
 - Sensitive Data Exposure
-- Brute Force Attack via Burp Intruder
+- Broken Authentication
+- Missing Brute Force Protection
 
 **Affected component:**
 
@@ -100,7 +107,7 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 - Compromission de comptes utilisateurs.
 - Prises de contrôle illégitimes.
 - Escalade potentielle selon le rôle de l’utilisateur.
-- Impact : fuite de données, actions malveillantes au nom d’un utilisateur, atteinte à la réputation.
+- Impact business: fuite de données, actions malveillantes au nom d’un utilisateur, atteinte à la réputation.
 
 ---
 
@@ -117,6 +124,14 @@ Ce sont les valeurs que Burp testera dans les positions du mot de passe.
 - Implémenter un **CAPTCHA** après plusieurs tentatives échouées.
 - Utiliser une politique de mots de passe robustes.
 - Ajouter une protection côté serveur contre les attaques automatisées.
+
+**Exemple:** mécanisme de protection contre le brute-force côté serveur
+
+```js
+if (loginAttempts > 5) {
+  return res.status(429).json({ error: "Too many login attempts" });
+}
+```
 
 **Best Practices**
 

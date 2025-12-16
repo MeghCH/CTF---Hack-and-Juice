@@ -57,10 +57,15 @@ Content-Type: application/json
 **Résultat :**  
 La commande passe même avec un montant négatif → challenge validé.
 
+## Techniques utilisées :
+
+- Parameter tampering
+- Business logic abuse
+- Price manipulation
+
 ## Outils utilisés :
 
 - Burp Suite (Proxy)
-
 - Navigateur Web
 
 ---
@@ -70,7 +75,6 @@ La commande passe même avec un montant négatif → challenge validé.
 **Vulnerability name:**
 
 - Improper Input Validation
-- Broken Access Control
 - Price Manipulation
 
 **Affected component:**
@@ -90,6 +94,7 @@ La commande passe même avec un montant négatif → challenge validé.
 - Perte financière directe.
 - Compromission de la logique de facturation.
 - Dégradation de la crédibilité de l'application.
+- Impact business: Perte financière, Risques juridiques
 
 ---
 
@@ -106,6 +111,14 @@ La commande passe même avec un montant négatif → challenge validé.
 - Forcer `quantity >= 1`.
 - Utiliser des entiers non signés (unsigned).
 - Recalculer le total **uniquement côté serveur**.
+
+**Example:** un contrôle de sécurité côté serveur
+
+```js
+if (quantity < 1) {
+  return res.status(400).json({ error: "Invalid quantity" });
+}
+```
 
 **Best Practices**
 
