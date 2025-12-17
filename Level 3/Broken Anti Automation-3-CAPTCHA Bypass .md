@@ -7,7 +7,7 @@
 - Déconnexion du compte utilisateur pour tester la fonctionnalité publique “Customer Feedback”.
 - Navigation vers la page :
 
-https://juice-shop.example.com/#/feedback
+https://juice-shop.example.com/#/contact
 
 **Step 2 – Premier test**
 
@@ -131,3 +131,6 @@ Content-Type: application/json
 
 **Site sur Captcha**
 https://medium.com/@mtsboysquad001/captcha-bypass-28de7279865b
+
+**Requete POST de d'envoie d'un commentaire**
+![Page web boutton grise](../image/Captcha_1.png)

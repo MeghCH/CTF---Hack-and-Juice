@@ -28,7 +28,8 @@ Content-Type: application/json
 
 - Clic droit → Send to Repeater.
 
-**Step 4 – Vérification du rôle retourné**  
+**Step 4 – Vérification du rôle retourné**
+
 Dans Repeater → Send :
 
 - Aller dans l'onglet **Raw** de Burp
@@ -138,3 +139,14 @@ const user = {
 - Tests réguliers de contrôle d’accès
 
 ---
+
+## 5. Evidence
+
+**Requete POST de creation d'utilisateur**
+![Page web boutton grise](../image/Admin_Registration_1.png)
+
+**Requete POST de creation d'utilisateur envoye a Repeater**
+![Page web boutton degrise](../image/Admin_Registration_2.png)
+
+**Requete modifiée dnas Proxy**
+![Requetes envoyee sur Burp](../image/Admin_Registration_3.png)
