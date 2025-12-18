@@ -143,8 +143,8 @@ if (loginAttempts > 5) {
 
 ## 5. Evidence
 
-**Requete POST du submit**
-![Requete POST du submit](../image/Login_Amy_1.png)
+**Requête POST du submit**
+![Requête POST du submit](../image/Login_Amy_1.png)
 
 **Payload Positions $**
 ![Payload Positions](../image/Login_Amy_2.png)

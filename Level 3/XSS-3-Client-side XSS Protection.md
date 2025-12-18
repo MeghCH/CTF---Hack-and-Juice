@@ -119,5 +119,5 @@ Payload injecté :
 Réponse du serveur :  
 "status": "success"
 
-**Resultat de la requete avec payload injecté**
-![Requete GET](../image/XSS_Client-side.png)
+**Resultat de la Requête avec payload injecté**
+![Requête GET](../image/XSS_Client-side.png)

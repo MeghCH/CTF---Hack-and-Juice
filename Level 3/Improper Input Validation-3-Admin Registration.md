@@ -142,11 +142,11 @@ const user = {
 
 ## 5. Evidence
 
-**Requete POST de creation d'utilisateur**
-![Page web boutton grise](../image/Admin_Registration_1.png)
+**Requête POST de création d'utilisateur**
+![Requête POST de création d'utilisateur](../image/Admin_Registration_1.png)
 
-**Requete POST de creation d'utilisateur envoye a Repeater**
-![Page web boutton degrise](../image/Admin_Registration_2.png)
+**Requête POST de creation d'utilisateur envoye a Repeater**
+![Requête POST de creation d'utilisateur envoyée a Repeater](../image/Admin_Registration_2.png)
 
-**Requete modifiée dnas Proxy**
-![Requetes envoyee sur Burp](../image/Admin_Registration_3.png)
+**Requête modifiée dans Proxy**
+![Requête modifiée dans Proxy](../image/Admin_Registration_3.png)

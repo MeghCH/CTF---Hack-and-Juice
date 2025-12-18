@@ -146,11 +146,11 @@ product.description = sanitizeHtml(req.body.description, {
 
 ## 5. Evidence
 
-**Requete GET**
-![Requete GET](../image/XSS_API_1.png)
+**Requête GET**
+![Requête GET](../image/XSS_API_1.png)
 
-**Requete GET changer en PUT**
-![Requete GET changer en PUT](../image/XSS_API_2.png)
+**Requête GET changer en PUT**
+![Requête GET changer en PUT](../image/XSS_API_2.png)
 
-**Resultat requete PUT**
-![Resultat requete PUT](../image/XSS_API_3.png)
+**Resultat Requête PUT**
+![Resultat Requête PUT](../image/XSS_API_3.png)

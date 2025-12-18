@@ -34,7 +34,7 @@
 
 - URL finale :
 
-      https://juice-shop.example.com/redirect?to=http://google.com/?test=shop.spreadshirt.com/juiceshop
+  https://ctf.juice.cyber.epitest.eu/redirect?to=http://google.com/?test=http://shop.spreadshirt.com/juiceshop
 
 - Résultat : redirection vers Google → bypass réussi.
 
@@ -103,3 +103,6 @@
 
 **Site OWASP REdirect Prevention**
 https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html
+
+**Page Google**
+![Page Google](../image/Allowlist_Bypass.png)

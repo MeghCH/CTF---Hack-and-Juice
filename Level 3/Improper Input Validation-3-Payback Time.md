@@ -19,7 +19,8 @@
 **Step 4 – Interception de la modification du panier**
 
 - Sur la page web, cliquer sur le bouton **+** dans le panier pour augmenter la quantité.
-- Retourner sur Burp Proxy.
+- Retourner sur Burp Proxy onglet Raw.
+- Puis appuyer sur Forward.
 - La requête interceptée ressemble à :
 
 PUT /api/BasketItems/1  
@@ -139,3 +140,12 @@ Content-Type: application/json
 }
 
 Montant du panier affiché en négatif → commande validée.
+
+**Requête avec quantité de base**
+![Requête avec quantité de base](../image/Payback_1.png)
+
+**Requête avec quantité modifiée**
+![Requête avec quantité modifiée](../image/Payback_2.png)
+
+**Panier final modifié**
+![Panier final modifié](../image/Payback_3.png)

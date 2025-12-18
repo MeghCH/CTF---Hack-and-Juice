@@ -127,14 +127,14 @@ if (!paymentConfirmed(userId)) {
 
 ## 5. Evidence
 
-**Page web boutton "pay" grise**
-![Page web boutton grise](../image/Deluxe_Member_1.png)
+**Page web boutton "pay" grisé**
+![Page web boutton grisé](../image/Deluxe_Member_1.png)
 
-**Page web boutton "pay" degrise**
-![Page web boutton degrise](../image/Deluxe_Member_2.png)
+**Page web boutton "pay" degrisé**
+![Page web boutton degrisé](../image/Deluxe_Member_2.png)
 
-**Requetes initiale envoyee sur Burp**
-![Requetes envoyee sur Burp](../image/Deluxe_Member_3.png)
+**Requête initiale envoyée sur Burp**
+![Requête envoyée sur Burp](../image/Deluxe_Member_3.png)
 
-**Requetes modifiee envoyee sur Burp**
-![Requetes envoyee sur Burp](../image/Deluxe_Member_4.png)
+**Requête modifiee envoyée sur Burp**
+![Requête envoyée sur Burp](../image/Deluxe_Member_4.png)

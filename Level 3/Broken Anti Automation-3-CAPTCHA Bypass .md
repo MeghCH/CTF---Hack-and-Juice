@@ -14,7 +14,6 @@ https://juice-shop.example.com/#/contact
 - Saisie du commentaire : `Hey`
 - Attribution d’une note de **3 étoiles**
 - Résolution du **captcha** manuellement
-- Soumission du formulaire pour observer le comportement normal de la requête.
 
 **Step 3 – Capture de la requête HTTP**
 
@@ -28,10 +27,12 @@ https://juice-shop.example.com/#/contact
 - Ouverture du **bloc-notes** pour noter les valeurs importantes :
 - `id` du commentaire
 - `captcha` soumis
-- Répétition du processus **2 fois supplémentaires** pour observer les variations dans la requête et les valeurs dynamiques.
+- Répétition du processus **2 fois supplémentaires** pour observer les variations dans la requête et les valeurs dynamiques. Et marquage de `l'id` et `captcha`.
+- Cliquer sur forward puis sur **Intercept ON** afin de le passer à OFF.
 
 **Step 5 – Exploitation**
 
+- Revenir sur la page de contact puis rafraichir la page.
 - Saisie d’un nouveau message : `Hallloooooo`
 - Attribution de 3 étoiles, réponse au captcha
 - Activation du **Intercept ON** puis soumission du formulaire à nouveau.
@@ -132,5 +133,8 @@ Content-Type: application/json
 **Site sur Captcha**
 https://medium.com/@mtsboysquad001/captcha-bypass-28de7279865b
 
-**Requete POST de d'envoie d'un commentaire**
-![Page web boutton grise](../image/Captcha_1.png)
+**RequêtePOST d'envoie d'un premier commentaire**
+![RequêtePOST d'envoie d'un premier commentaire](../image/Captcha_1.png)
+
+**RequêtePOST du dernier commentaire dans Repeater**
+![RequêtePOST du dernier commentaire dans Repeater](../image/Captcha_2.png)
