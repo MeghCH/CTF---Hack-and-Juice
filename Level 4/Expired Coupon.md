@@ -70,8 +70,3 @@
 - OWASP Input Validation.
 
 ---
-
-## 5. Evidence
-
-**Requête modifiée**
-![Requête](../image/Expired_Coupon_1.png)

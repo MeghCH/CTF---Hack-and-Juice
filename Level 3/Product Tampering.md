@@ -80,11 +80,3 @@
 - Auditer les entrées utilisateur.
 
 ---
-
-## 5. Evidence
-
-**Site OWASP XSS**
-https://owasp.org/www-community/attacks/xss/
-
-**Requête PUT**
-![Requête PUT](../image/Product_Tampering_1.png)

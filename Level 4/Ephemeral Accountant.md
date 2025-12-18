@@ -68,8 +68,3 @@
 - OWASP SQL Injection Prevention.
 
 ---
-
-## 5. Evidence
-
-**Payload SQL**
-![Payload](../image/Ephemeral_Accountant_1.png)

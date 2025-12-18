@@ -68,8 +68,3 @@
 - OWASP Upload de fichiers.
 
 ---
-
-## 5. Preuves
-
-**Requête modifiée**
-![Requête](../image/Upload_Size_1.png)

@@ -70,8 +70,3 @@
 - OWASP Improper Input Validation.
 
 ---
-
-## 5. Evidence
-
-**Requête Burp Suite modifiée**
-![Upload Type](../image/Upload_Type_1.png)

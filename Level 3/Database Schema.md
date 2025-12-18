@@ -83,11 +83,3 @@
 - Suivre les conseils OWASP sur les injections.
 
 ---
-
-## 5. Preuves
-
-**Site OWASP Injection SQL**
-https://owasp.org/www-community/attacks/SQL_Injection
-
-**Requête d'injection**
-![Requête](../image/SQL_Injection_1.png)

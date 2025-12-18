@@ -68,8 +68,3 @@
 - OWASP Sensitive Data Exposure.
 
 ---
-
-## 5. Evidence
-
-**Fichier backup**
-![Backup](../image/Forgotten_Backup_1.png)
