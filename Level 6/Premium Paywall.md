@@ -78,6 +78,3 @@
 ---
 
 ## 5. Evidence
-
-**Décryptage avec OpenSSL**
-![Premium Paywall](../image/Premium_Paywall_1.png)

@@ -67,8 +67,3 @@
 - OWASP Sensitive Data Exposure.
 
 ---
-
-## 5. Evidence
-
-**Fichier blueprint**
-![Blueprint](../image/Retrieve_Blueprint_1.png)

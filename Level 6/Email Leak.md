@@ -71,8 +71,3 @@
 - OWASP Sensitive Data Exposure.
 
 ---
-
-## 5. Evidence
-
-**Réponse API avec callback**
-![Email Leak](../image/Email_Leak_1.png)

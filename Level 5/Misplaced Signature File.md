@@ -72,8 +72,3 @@
 - OWASP Improper Input Validation.
 
 ---
-
-## 5. Evidence
-
-**Requête Burp Suite**
-![Misplaced Signature File](../image/Misplaced_Signature_File_1.png)
