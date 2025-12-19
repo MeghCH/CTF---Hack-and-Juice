@@ -9,6 +9,7 @@
 **Step 2 – File content**
 
 - Use this structure to build a string where each level repeats the previous one many times:
+
 ```
   a: &a [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_]
   b: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a,*a]
@@ -22,7 +23,7 @@
   j: &j [*i,*i,*i,*i,*i,*i,*i,*i,*i,*i]
   k: &k [*j,*j,*j,*j,*j,*j,*j,*j,*j,*j]
   l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
-  ```
+```
 
 - This structure acts like a bomb because each level copies the previous one several times, causing the data to grow enormously when the program reads the YAML file.
 
@@ -62,12 +63,11 @@
 
 ---
 
-
 ## 3. Risks
 
 - Excessive memory usage, which can cause denial of service or system crashes.
 
--Business impact: user trust loss, reputational damage.
+- **Business impact:** user trust loss, reputational damage.
 
 ---
 
@@ -89,6 +89,6 @@
 
 ## 5. Evidence
 
-**Structure YAML de la bombe mémoire**
+**YAML structure of the memory bomb**
 ![Memory Bomb](./image/memory_bomb1.png)
 ![Memory Bomb](./image/memory_bomb2.png)
