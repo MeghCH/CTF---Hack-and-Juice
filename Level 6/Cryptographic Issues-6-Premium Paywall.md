@@ -59,6 +59,8 @@
 
 - Exposition de clés de chiffrement et d'URLs cachées derrière des paywalls.
 
+-Business impact: user trust loss,reputational damage,Loss of money: users have access to exclusive content without anything.
+
 ---
 
 ## 4. Actions

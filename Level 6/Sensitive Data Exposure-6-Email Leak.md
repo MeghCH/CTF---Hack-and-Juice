@@ -54,6 +54,8 @@
 
 - Exposition des emails et informations des utilisateurs connectés via des appels API non sécurisés.
 
+-Business impact: user trust loss,reputational damage,Loss of confidential data can lead to marketing problems.
+
 ---
 
 ## 4. Actions
