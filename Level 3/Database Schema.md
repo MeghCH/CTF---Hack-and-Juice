@@ -1,11 +1,11 @@
-**_Database Schema – Level 3_**
+**Injection-3-Database Schema**
 
 ## 1. Méthodologie
 
 **Étape 1 – Préparation**
 
 - Lancer Burp Suite pour capturer les requêtes envoyées au site.
-- Aller sur la page où on cherche des produits.
+- Aller sur la page où on cherche des produits. (/rest/products/search?q=)
 
 **Étape 2 – Injection SQL**
 
@@ -19,7 +19,7 @@
 
 - Utiliser une union pour sortir les infos de la table sqlite_master :
 
-        danyvalue')) union all select 1,2,3,sql,5,6,7,8,9 from sqlite_master --
+        anyvalue')) union all select 1,2,3,sql,5,6,7,8,9 from sqlite_master --
 
 - Récupérer la structure de la base de données.
 
@@ -31,7 +31,6 @@
 ## Techniques utilisées :
 
 - Injection SQL
-- Injection basée sur union
 
 ## Outils utilisés :
 
@@ -83,3 +82,7 @@
 - Suivre les conseils OWASP sur les injections.
 
 ---
+## 5. Preuves
+
+
+![Database shema](../image/Database_shema.png)

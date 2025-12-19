@@ -1,4 +1,4 @@
-**_Manipulate Basket – Level 3_**
+**Broken Access Control-3-Manipulate Basket**
 
 ## 1. Méthodologie
 
@@ -21,7 +21,6 @@
 
 ## Techniques utilisées :
 
-- IDOR (Référence directe d'objet non sécurisée)
 - Manipulation de paramètres
 
 ## Outils utilisés :
@@ -34,7 +33,7 @@
 
 **Vulnérabilité :**
 
-- Référence directe d'objet non sécurisée (IDOR)
+- Référence directe d'objet non sécurisée
 
 **Composant affecté :**
 
@@ -64,6 +63,11 @@
 
 **Bonnes pratiques**
 
-- OWASP IDOR.
+-?
 
 ---
+
+## 5. Evidence
+
+
+![Manipulate Basket](../image/Manipulate_Basket.png)

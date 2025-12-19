@@ -1,4 +1,4 @@
-# _Upload Type – Level 3_
+# **Improper Input Validation-3-Upload Type **
 
 ## 1. Methodology
 
@@ -70,3 +70,8 @@
 - OWASP Improper Input Validation.
 
 ---
+
+## 5. Evidence
+
+
+![upload type](../image/upload_type.png)
