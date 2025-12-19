@@ -1,4 +1,4 @@
-# _Memory Bomb – Level 5_
+# **Insecure Deserialization-5-Memory Bomb**
 
 ## 1. Méthodologie
 
@@ -71,7 +71,7 @@
 
 **Réduction des risques**
 
-- Désactiver le traitement des ancres et des alias dans les fichiers YAML téléversés.
+- Désactiver le traitement des alias dans les fichiers YAML téléversés.
 
 **Correction**
 
@@ -86,4 +86,5 @@
 ## 5. Preuves
 
 **Structure YAML de la bombe mémoire**
-![Memory Bomb](../image/Memory_Bomb_1.png)
+![Memory Bomb](../image/memory_bomb1.png)
+![Memory Bomb](../image/memory_bomb2.png)

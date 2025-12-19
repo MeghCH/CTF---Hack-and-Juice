@@ -1,4 +1,4 @@
-# _Misplaced Signature File – Level 5_
+# **Sensitive Data Exposure-5-Misplaced signature file** 
 
 ## 1. Methodology
 
@@ -8,7 +8,7 @@
 
 **Step 2 – Accès au répertoire /ftp**
 
-- Naviguer vers le répertoire /ftp/ exposé publiquement pour accéder aux fichiers.
+- Naviguer vers le répertoire /ftp/ pour accéder aux fichier suspicious_errors.yml.
 
 **Step 3 – Contournement de la restriction d'extension**
 
@@ -72,3 +72,8 @@
 - OWASP Improper Input Validation.
 
 ---
+
+## 5. Preuves
+
+
+![Misplaced Signature File](../image/Misplaced_Signature_File.png)

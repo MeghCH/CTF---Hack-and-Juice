@@ -8,7 +8,7 @@
 
 **Step 2 – Recherche du blueprint**
 
-- Exploration des répertoires pour trouver le fichier blueprint.
+- Exploration des répertoires pour trouver le fichier blueprint.(assets/public/images/products/JuiceShop.stl)
 
 **Step 3 – Téléchargement**
 
