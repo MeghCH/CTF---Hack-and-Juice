@@ -1,4 +1,4 @@
-**_Retrieve blueprint – Level 5_**
+**Sensitive Data Exposure-5-Retrieve blueprint**
 
 ## 1. Methodology
 
@@ -49,6 +49,8 @@
 ## 3. Risks
 
 - Exposition de plans sensibles.
+
+-Business impact user trust loss, reputational damage, loss of money.
 
 ---
 

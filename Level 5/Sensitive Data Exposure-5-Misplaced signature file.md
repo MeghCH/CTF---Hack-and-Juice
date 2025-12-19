@@ -55,6 +55,8 @@
 
 - Exposition de fichiers sensibles comme les règles de détection (suspicious_errors.yml).
 
+-Business impact: user trust loss, reputational damage.
+
 ---
 
 ## 4. Actions

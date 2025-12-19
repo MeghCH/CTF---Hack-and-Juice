@@ -65,6 +65,8 @@
 
 - Utilisation excessive de la mémoire, ce qui peut causer un déni de service ou un plantage du système.
 
+-Business impact: user trust loss, reputational damage.
+
 ---
 
 ## 4. Actions
