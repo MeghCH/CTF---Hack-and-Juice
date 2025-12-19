@@ -1,4 +1,4 @@
-# **Sensitive Data Exposure-5-Misplaced signature file**
+# **Sensitive Data Exposure-5-Misplaced signature file** 
 
 ## 1. Methodology
 
@@ -6,15 +6,15 @@
 
 - Use Burp Suite to intercept and modify HTTP requests.
 
-**Step 2 – Access to /ftp directory**
+**Step 2 – Accessing the /ftp directory**
 
-- Navigate to the /ftp/ directory to access suspicious_errors.yml file.
+- Navigate to the /ftp/ directory to access the suspicious_errors.yml file.
 
-**Step 3 – Bypass extension restriction**
+**Step 3 – Bypassing the extension restriction**
 
-- Add %2500 (double encoding of null byte) to mask the real extension (.yml) behind an allowed extension (.md).
+- Add %2500 (double encoding of the null byte) to hide the real extension (.yml) behind an allowed extension (.md).
 
-**Step 4 – Download the file**
+**Step 4 – Downloading the file**
 
 - Send the modified request: GET /ftp/suspicious_errors.yml%2500.md HTTP/1.1
 
@@ -28,7 +28,7 @@
 - Null Byte Injection
 - Double URL Encoding
 
-## Tools used :
+## Tools used:
 
 - Burp Suite
 
@@ -53,10 +53,9 @@
 
 ## 3. Risks
 
-- Exposure of sensitive files like detection rules (suspicious_errors.yml).
+- Exposure of sensitive files such as detection rules (suspicious_errors.yml).
 
--Business impact: user trust loss, reputational damage.
-
+-Business impact user trust loss, reputational damage.
 ---
 
 ## 4. Actions
@@ -67,7 +66,7 @@
 
 **Remediation Fix**
 
-- Block special characters like %00 and %2500 in filenames.
+- Block special characters such as %00 and %2500 in file names.
 
 **Best Practices**
 
@@ -75,7 +74,7 @@
 
 ---
 
-## 5. Proofs
+## 5. Evidence
 
 
-![Misplaced Signature File](./image/Misplaced_Signature_File.png)
+![Misplaced Signature File](../image/Misplaced_Signature_File.png)

