@@ -1,35 +1,35 @@
-# **Vulnerable components-5-Kill Chatbot**
+# **Vulnerable Components - 5-Kill Chatbot**
 
 ## 1. Methodology
 
-**Step 1 – Préparation**
+**Step 1 – Preparation**
 
-- Accéder au chatbot dans l'application Juice Shop.
+- Access the chatbot in the Juice Shop app.
 
-**Step 2 – Injection de code malveillant**
+**Step 2 – Malicious Code Injection**
 
-- Envoyer la chaîne d'injection : admin"); processQuery=null; users.addUser("1337", "test
+- Send the injection string: admin"); processQuery=null; users.addUser("1337", "test"
 
-**Step 3 – Observation de l'erreur**
+**Step 3 – Error Observation**
 
-- Le chatbot renvoie une erreur après l'injection.
+- The chatbot returns an error after the injection.
 
-**Step 4 – Continuation de l'interaction**
+**Step 4 – Continued Interaction**
 
-- Continuer à interagir avec le chatbot pour déclencher la validation.
+- Continue interacting with the chatbot to trigger validation.
 
 **Step 5 – Validation**
 
-- Le challenge "Kill Chatbot" est validé suite à l'erreur persistante.
+- The "Kill Chatbot" challenge is validated due to the persistent error.
 
-## Techniques utilisées:
+## Techniques Used:
 
 - Injection
 - Code Execution
 
-## Outils utilisés :
+## Tools Used:
 
-- Navigateur web
+- Web Browser
 
 ---
 
@@ -40,9 +40,9 @@
 - Injection
 - Improper Input Validation
 
-**Affected component:**
+**Affected Component:**
 
-- Chatbot de l'application
+- Application Chatbot
 
 **Severity:**
 
@@ -52,9 +52,9 @@
 
 ## 3. Risks
 
-- Exécution de code arbitraire via le chatbot, permettant des actions non autorisées comme l'ajout d'utilisateurs.
+- Arbitrary code execution via the chatbot, allowing unauthorized actions such as adding users.
 
--Business impact: user trust loss, no support for user,customer loss due to loss of support.
+- Business impact: loss of user trust, lack of user support, customer loss due to loss of support.
 
 ---
 
@@ -62,11 +62,11 @@
 
 **Risk Mitigation**
 
-- Implémenter une validation stricte des entrées utilisateur dans le chatbot.
+- Implement strict validation of user input in the chatbot.
 
 **Remediation Fix**
 
-- Échapper les caractères spéciaux et utiliser des requêtes paramétrées.
+- Escape special characters and use parameterized queries.
 
 **Best Practices**
 
@@ -76,5 +76,5 @@
 
 ## 5. Evidence
 
-**Injection dans le chatbot**
-![Kill Chatbot](../image/Kill_Chatbot_1.png)
+**Injection into the chatbot**
+![Kill Chatbot](./image/Kill_Chatbot_1.png)

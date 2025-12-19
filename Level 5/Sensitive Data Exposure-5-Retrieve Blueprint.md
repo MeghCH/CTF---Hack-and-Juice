@@ -2,30 +2,30 @@
 
 ## 1. Methodology
 
-**Step 1 – Préparation**
+**Step 1 – Preparation**
 
-- Navigation vers les fichiers disponibles.
+- Navigation to available files.
 
-**Step 2 – Recherche du blueprint**
+**Step 2 – Blueprint search**
 
-- Exploration des répertoires pour trouver le fichier blueprint.(assets/public/images/products/JuiceShop.stl)
+- Explore directories to find the blueprint file.(assets/public/images/products/JuiceShop.stl)
 
-**Step 3 – Téléchargement**
+**Step 3 – Download**
 
-- Télécharger le fichier.
+- Download the file.
 
 **Step 4 – Validation**
 
-- Challenge validé.
+- Challenge validated.
 
-## Techniques utilisées:
+## Techniques used:
 
 - File Discovery
 - Directory Traversal
 
-## Outils utilisés :
+## Tools used :
 
-- Navigateur web
+- Web browser
 
 ---
 
@@ -38,7 +38,7 @@
 
 **Affected component:**
 
-- Répertoires accessibles
+- Accessible directories
 
 **Severity:**
 
@@ -48,7 +48,7 @@
 
 ## 3. Risks
 
-- Exposition de plans sensibles.
+- Exposure of sensitive plans.
 
 -Business impact: user trust loss, reputational damage, loss of money.
 
@@ -58,11 +58,11 @@
 
 **Risk Mitigation**
 
-- Sécuriser les répertoires.
+- Secure directories.
 
 **Remediation Fix**
 
-- Déplacer les fichiers sensibles.
+- Move sensitive files.
 
 **Best Practices**
 

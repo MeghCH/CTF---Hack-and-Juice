@@ -1,34 +1,34 @@
-# **Sensitive Data Exposure-5-Misplaced signature file** 
+# **Sensitive Data Exposure-5-Misplaced signature file**
 
 ## 1. Methodology
 
-**Step 1 – Préparation**
+**Step 1 – Preparation**
 
-- Utiliser Burp Suite pour intercepter et modifier les requêtes HTTP.
+- Use Burp Suite to intercept and modify HTTP requests.
 
-**Step 2 – Accès au répertoire /ftp**
+**Step 2 – Access to /ftp directory**
 
-- Naviguer vers le répertoire /ftp/ pour accéder aux fichier suspicious_errors.yml.
+- Navigate to the /ftp/ directory to access suspicious_errors.yml file.
 
-**Step 3 – Contournement de la restriction d'extension**
+**Step 3 – Bypass extension restriction**
 
-- Ajouter %2500 (double encodage du null byte) pour masquer l'extension réelle (.yml) derrière une extension autorisée (.md).
+- Add %2500 (double encoding of null byte) to mask the real extension (.yml) behind an allowed extension (.md).
 
-**Step 4 – Téléchargement du fichier**
+**Step 4 – Download the file**
 
-- Envoyer la requête modifiée : GET /ftp/suspicious_errors.yml%2500.md HTTP/1.1
+- Send the modified request: GET /ftp/suspicious_errors.yml%2500.md HTTP/1.1
 
 **Step 5 – Validation**
 
-- Le fichier suspicious_errors.yml est téléchargé, validant le challenge.
+- The suspicious_errors.yml file is downloaded, validating the challenge.
 
-## Techniques utilisées:
+## Techniques used:
 
 - File Discovery
 - Null Byte Injection
 - Double URL Encoding
 
-## Outils utilisés :
+## Tools used :
 
 - Burp Suite
 
@@ -43,7 +43,7 @@
 
 **Affected component:**
 
-- Filtre d'extension des fichiers dans /ftp/
+- File extension filter in /ftp/
 
 **Severity:**
 
@@ -53,7 +53,7 @@
 
 ## 3. Risks
 
-- Exposition de fichiers sensibles comme les règles de détection (suspicious_errors.yml).
+- Exposure of sensitive files like detection rules (suspicious_errors.yml).
 
 -Business impact: user trust loss, reputational damage.
 
@@ -63,11 +63,11 @@
 
 **Risk Mitigation**
 
-- Implémenter une validation stricte des extensions sans dépendre du décodage.
+- Implement strict extension validation without relying on decoding.
 
 **Remediation Fix**
 
-- Bloquer les caractères spéciaux comme %00 et %2500 dans les noms de fichiers.
+- Block special characters like %00 and %2500 in filenames.
 
 **Best Practices**
 
@@ -75,7 +75,7 @@
 
 ---
 
-## 5. Preuves
+## 5. Proofs
 
 
-![Misplaced Signature File](../image/Misplaced_Signature_File.png)
+![Misplaced Signature File](./image/Misplaced_Signature_File.png)
