@@ -50,7 +50,7 @@
 
 - Exposition de plans sensibles.
 
--Business impact user trust loss, reputational damage, loss of money.
+-Business impact: user trust loss, reputational damage, loss of money.
 
 ---
 

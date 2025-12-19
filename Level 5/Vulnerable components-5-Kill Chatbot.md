@@ -54,7 +54,7 @@
 
 - Exécution de code arbitraire via le chatbot, permettant des actions non autorisées comme l'ajout d'utilisateurs.
 
--Business impact user trust loss, no support for user,customer loss due to loss of support.
+-Business impact: user trust loss, no support for user,customer loss due to loss of support.
 
 ---
 
