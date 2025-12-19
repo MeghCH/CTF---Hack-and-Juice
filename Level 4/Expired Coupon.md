@@ -1,20 +1,19 @@
-**_Expired Coupon – Level 4_**
+**Improper Input Validation-4-Expired Coupon**
 
 ## 1. Methodology
 
 **Step 1 – Préparation**
 
-- Navigation vers la page de coupon.
-- Observation des conditions d'utilisation.
+- Vérification du code de la page.
+- On voit dans Main.js des coupon périmée.
 
 **Step 2 – Modification de la date**
 
-- Interception de la requête avec Burp.
-- Changement de la date d'expiration.
+- Modification de l'heure du pc.
 
 **Step 3 – Soumission**
 
-- Envoi de la requête modifiée.
+- Envoi de la requête d'âchat avec le coupon périmée.
 
 **Step 4 – Validation**
 
@@ -70,3 +69,8 @@
 - OWASP Input Validation.
 
 ---
+
+## 5. Evidence
+
+
+![upload type](../image/Expired_coupon.png)
