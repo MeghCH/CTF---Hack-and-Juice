@@ -2,32 +2,32 @@
 
 ## 1. Methodology
 
-**Step 1 – Préparation**
+**Step 1 – Preparation**
 
-- Utiliser Burp Suite et FoxyProxy pour intercepter les requêtes.
+- Use Burp Suite and FoxyProxy to intercept requests.
 
-**Step 2 – Accès à l'API**
+**Step 2 – API access**
 
-- Naviguer vers l'endpoint /rest/user/whoami avec un paramètre callback.
+- Navigate to the /rest/user/whoami endpoint with a callback parameter.
 
-**Step 3 – Exploitation du callback**
+**Step 3 – Callback exploitation**
 
-- Utiliser un callback comme anyname pour récupérer les informations utilisateur.
+- Use a callback like anyname to retrieve user information.
 
-**Step 4 – Observation des données**
+**Step 4 – Data observation**
 
-- L'API retourne les informations des utilisateurs connectés, incluant l'email.
+- The API returns information of logged-in users, including email.
 
 **Step 5 – Validation**
 
-- Le challenge est validé en accédant aux données sensibles cross-domain.
+- The challenge is validated by accessing sensitive data cross-domain.
 
-## Techniques utilisées:
+## Techniques used:
 
 - Sensitive Data Exposure
 - API Callback Exploitation
 
-## Outils utilisés :
+## Tools used :
 
 - Burp Suite
 - FoxyProxy
@@ -52,7 +52,7 @@
 
 ## 3. Risks
 
-- Exposition des emails et informations des utilisateurs connectés via des appels API non sécurisés.
+- Exposure of emails and information of logged-in users via unsecured API calls.
 
 -Business impact: user trust loss,reputational damage,Loss of confidential data can lead to marketing problems.
 
@@ -62,11 +62,11 @@
 
 **Risk Mitigation**
 
-- Implémenter des contrôles d'accès stricts sur les endpoints API.
+- Implement strict access controls on API endpoints.
 
 **Remediation Fix**
 
-- Désactiver les callbacks non autorisés et ajouter une authentification.
+- Disable unauthorized callbacks and add authentication.
 
 **Best Practices**
 
@@ -76,4 +76,4 @@
 
 **Evidences**
 
-![Email_leak](../image/email_leak.png)
+![Email_leak](./image/email_leak.png)

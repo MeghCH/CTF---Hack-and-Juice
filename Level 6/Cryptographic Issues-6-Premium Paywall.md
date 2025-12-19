@@ -2,36 +2,36 @@
 
 ## 1. Methodology
 
-**Step 1 – Recherche de la clé de chiffrement**
+**Step 1 – Finding the Encryption Key**
 
-- Utiliser un outil comme goBuster pour découvrir le répertoire /encryptionkeys.
+- Use a tool like goBuster to discover the /encryptionkeys directory.
 
-**Step 2 – Téléchargement de la clé**
+**Step 2 – Downloading the Key**
 
-- Télécharger le fichier premium.key contenant la clé AES-128.
+- Download the premium.key file containing the AES-128 key.
 
-**Step 3 – Recherche des données cryptées**
+**Step 3 – Finding the Encrypted Data**
 
-- Analyser le code source pour trouver le commentaire cryptés.
+- Analyze the source code to find the encrypted comments.
 
-**Step 4 – Décryptage**
+**Step 4 – Decryption**
 
-- Utiliser OpenSSL pour décrypter la chaîne base64 avec la clé.
+- Use OpenSSL to decrypt the base64 string with the key.
 
-**Step 5 – Accès à l'URL cachée**
+**Step 5 – Accessing the Hidden URL**
 
-- Naviguer vers l'URL décryptée pour contourner le paywall.(this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us)
+- Navigate to the decrypted URL to bypass the paywall. (this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us)
 
 **Step 6 – Validation**
 
-- Le challenge est validé en accédant à la page cachée.
+- The challenge is validated by accessing the hidden page.
 
-## Techniques utilisées:
+## Techniques Used:
 
 - Cryptographic Issues
 - Sensitive Data Exposure
 
-## Outils utilisés :
+## Tools Used:
 
 - goBuster
 - OpenSSL
@@ -45,9 +45,9 @@
 - Cryptographic Issues
 - Sensitive Data Exposure
 
-**Affected component:**
+**Affected Component:**
 
-- Répertoire /encryptionkeys et commentaires cryptés
+- Encrypted /encryptionkeys directory and comments
 
 **Severity:**
 
@@ -57,9 +57,9 @@
 
 ## 3. Risks
 
-- Exposition de clés de chiffrement et d'URLs cachées derrière des paywalls.
+- Exposure of encryption keys and URLs hidden behind paywalls.
 
--Business impact: user trust loss,reputational damage,Loss of money: users have access to exclusive content without anything.
+- Business impact: loss of user trust, reputational damage, loss of revenue: users have access to exclusive content without any cost.
 
 ---
 
@@ -67,18 +67,18 @@
 
 **Risk Mitigation**
 
-- Sécuriser les répertoires sensibles et éviter de stocker des clés en clair.
+- Secure sensitive directories and avoid storing keys in plaintext.
 
 **Remediation Fix**
 
-- Utiliser des clés gérées et chiffrer les données sensibles correctement.
+- Use managed keys and encrypt sensitive data properly.
 
 **Best Practices**
 
 - OWASP Cryptographic Failures.
 
----
+--
 
-**Evidences**
+**Evidence**
 
-![premium_paywall](../image/premium_paywall.png)
+![premium_paywall](./image/premium_paywall.png)
