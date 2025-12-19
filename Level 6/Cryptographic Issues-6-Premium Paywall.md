@@ -1,4 +1,4 @@
-# _Premium Paywall – Level 6_
+# **Cryptographic Issues-6-Premium Paywall**
 
 ## 1. Methodology
 
@@ -12,15 +12,15 @@
 
 **Step 3 – Recherche des données cryptées**
 
-- Analyser le code source pour trouver des commentaires cryptés.
+- Analyser le code source pour trouver le commentaire cryptés.
 
 **Step 4 – Décryptage**
 
-- Utiliser OpenSSL pour décrypter la chaîne base64 avec la clé et l'IV.
+- Utiliser OpenSSL pour décrypter la chaîne base64 avec la clé.
 
 **Step 5 – Accès à l'URL cachée**
 
-- Naviguer vers l'URL décryptée pour contourner le paywall.
+- Naviguer vers l'URL décryptée pour contourner le paywall.(this/page/is/hidden/behind/an/incredibly/high/paywall/that/could/only/be/unlocked/by/sending/1btc/to/us)
 
 **Step 6 – Validation**
 
@@ -77,4 +77,6 @@
 
 ---
 
-## 5. Evidence
+**Evidences**
+
+![premium_paywall](../image/premium_paywall.png)

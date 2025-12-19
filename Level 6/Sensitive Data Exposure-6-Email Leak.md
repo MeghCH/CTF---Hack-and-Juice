@@ -1,4 +1,4 @@
-# _Email Leak – Level 6_
+# **Sensitive Data Exposure-6-Email Leak**
 
 ## 1. Methodology
 
@@ -71,3 +71,7 @@
 - OWASP Sensitive Data Exposure.
 
 ---
+
+**Evidences**
+
+![Email_leak](../image/email_leak.png)
