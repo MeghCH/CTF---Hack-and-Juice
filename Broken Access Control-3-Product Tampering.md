@@ -5,7 +5,7 @@
 **Step 1 – Preparation**
 
 - Log in as a regular user with a valid JWT token.
-- Navigate to a specific product page (e.g., product ID 9).
+- Navigate to a specific product page (product ID 9).
 - Identify that product fields (like description) are editable through a client-side request.
 
 **Step 2 – Interception of the product update request**
@@ -19,9 +19,9 @@
 - Modify the product description field in the JSON body.
 - Inject an XSS payload such as:
 
-\`
-<a href="https://owasp.slack.com" target="_blank">More...</a>
-\`
+```html
+<a href="https://owasp.slack.com" target="_blank"></a>
+```
 
 - Forward the request with the altered content.
 

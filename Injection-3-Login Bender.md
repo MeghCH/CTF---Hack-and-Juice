@@ -83,7 +83,7 @@ This payload closes the SQL string and comments out the rest of the query, compl
 
 - Never concatenate user input into SQL queries.
 - Use prepared statements.
-- Strictly validate user input (e.g., email format).
+- Strictly validate user input (email format).
 
 **Remediation Fixes:**
 

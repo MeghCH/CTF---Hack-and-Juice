@@ -9,13 +9,13 @@
 
 **Step 2 – Initial Upload Attempt**
 
-- Try uploading a non-PDF file (e.g., `.png` or `.txt`).
+- Try uploading a non-PDF file (`.png` or `.txt`).
 - The application rejects the upload due to frontend validation.
 
 **Step 3 – Capture and Modify the Upload Request**
 
 - Intercept the upload request in Burp Suite.
-- Locate the `Content-Type` header (e.g., `image/png`).
+- Locate the `Content-Type` header (`image/png`).
 - Modify this value to: `application/pdf`.
 
 Example:
@@ -55,7 +55,7 @@ Content-Type: application/pdf
 
 ## 3. Risks
 
-- Uploading disguised files (e.g., webshells).
+- Uploading disguised files (webshells).
 - Malware distribution.
 - Potential remote code execution if the backend processes uploaded files.
 - **Business impact:**

@@ -4,7 +4,7 @@
 
 **Step 1 – Preparation**
 
-- Navigate to a section that allows file uploads (e.g., complaint submission page).
+- Navigate to a section that allows file uploads (complaint submission page).
 - Open **Burp Suite** and enable **Intercept ON** to capture outgoing upload traffic.
 
 **Step 2 – Initial Upload Attempt**
@@ -15,8 +15,8 @@
 
 **Step 3 – Request Manipulation**
 
-- Locate the file size–related metadata (e.g., `Content-Length`).
-- Modify the size value to exceed backend limits (e.g., from KB to several GB).
+- Locate the file size–related metadata (`Content-Length`).
+- Modify the size value to exceed backend limits (from KB to several GB).
 - Forward or replay the modified request through **Burp Repeater**.
 
 **Step 4 – Validation**
