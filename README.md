@@ -2,21 +2,21 @@ We are first-year students at Epitech, and Hack and Juice is our very first proj
 This project immerses us in the exciting world of web penetration testing, by exploring the OWASP Juice Shop
 — a deliberately vulnerable web application designed for learning and practicing web security.
 
-## Objectifs du projet
+## Project Objectives
 
-- Découvrir les vulnérabilités du Top 10 OWASP
-- Apprendre les bases du pentesting web
-- Développer une méthodologie d’audit de sécurité
-- Comprendre comment corriger les failles exploitées
-- Collaborer en équipe et documenter nos découvertes
+- Discover the OWASP Top 10 web vulnerabilities
+- Learn the basics of web penetration testing
+- Develop a security audit methodology
+- Understand how to fix the exploited vulnerabilities
+- Collaborate as a team and document our findings
 
-## Avertissement
+## Disclaimer
 
-Ce projet est strictement éducatif et doit être utilisé uniquement dans un environnement de test.
-Ne jamais tenter d’exploiter ces vulnérabilités sur des systèmes réels sans autorisation explicite.
+This project is strictly for educational purposes and should be used only in a controlled test environment.
+Never attempt to exploit these vulnerabilities on real systems without explicit authorization.
 
-## Équipe
+## Team
 
-Nom : GoOf Industry (Meghan & Seyf)
-Projet : Hack and Juice — OWASP Juice Shop
-Matière : Introduction à la cybersécurité
+Name: GoOf Industry (Meghan & Seyf)
+Project: Hack and Juice — OWASP Juice Shop
+Subject: Introduction to Cybersecurity
